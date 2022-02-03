@@ -24,7 +24,7 @@ public class Triangulos {
         int fila;
         int columna;
         
-        while(menu != 6){
+        while(menu != 7){
             System.out.println("Bienvenido, juguemos");
             
             switch(menu){
@@ -134,7 +134,37 @@ public class Triangulos {
                         System.out.println();
                     }
                     
-                    break;                        
+                    break;
+                    
+                    case 6:
+                    
+                        //Pedimos nuevamente el numero de filas
+                        System.out.println("Ok, ahora dibujemos el triangulito del otro lado");
+                        System.out.println("Cuantas filas quieres?");
+                    
+                        entrada = in.nextLine();
+                    
+                        fila = Integer.parseInt(entrada);
+                                        
+                        for(int i=1; i<= fila; i++){
+                        
+                            for(int j=fila; j>i ; j--){
+                                System.out.print(" ");
+                            }
+                            
+                            if( i == 1){
+                                System.out.print("  *");
+                            }
+                            else{
+                                
+                                for(int k=i+2; k>=2 ; k--){
+                                    System.out.print(" *");
+                                }                                
+                            }
+                            
+                            System.out.println();
+                        }                                                                   
+                        break;
             }
             
             System.out.println("Elige una opcion de 1-5, 6 para salir");
