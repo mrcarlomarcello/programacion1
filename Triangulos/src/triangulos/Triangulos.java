@@ -17,9 +17,10 @@ public class Triangulos {
         // TODO code application logic here
         System.out.println("Elige una opcion de 1-5");
         Scanner in = new Scanner(System.in);        
-        String entrada = in.nextLine();        
+        
+        int entrada = in.nextInt();        
+        int menu =  entrada;
         System.out.println(entrada);    
-        int menu = Integer.parseInt(entrada);
         
         int fila;
         int columna;
@@ -30,18 +31,16 @@ public class Triangulos {
             switch(menu){
                
                 case 1:
-                    //pedimos ingresar las filas
-                    System.out.println("Ok, dibujemos una figura rectangular");
+                    System.out.println("Ok, dibujemos una figura rectangular");                    
+                    //pedimos ingresar las filas                    
                     System.out.println("Elije la Cantidad de Filas");
-                    
-                    entrada = in.nextLine();                    
-                    fila =  Integer.parseInt(entrada);
+                    //ocupa failswitch:
+                    fila =  in.nextInt();
                     
                     //pedimos ingresar las columnas
                     System.out.println("Ok, ahora dime cuantas Columnas?");
-                    
-                    entrada = in.nextLine();                    
-                    columna = Integer.parseInt(entrada);
+                    //ocupa failswitch:
+                    columna = in.nextInt();
                                                           
                     for(int i=1; i <= fila; i++){
                         for(int j=1; j <= columna; j++){
@@ -58,9 +57,9 @@ public class Triangulos {
                     // Pedimos ingresar el numero de filas
                     System.out.println("Ok, dibujemos un trianguilito:");
                     System.out.println("Cuantas filas quieres?");
-                    entrada = in.nextLine();
                     
-                    fila = Integer.parseInt(entrada);
+                    //ocupa failswitch
+                    fila = in.nextInt();
                     
                     for(int i = 1; i<=fila; i++){
                         for(int j=1; j<=i; j++){
@@ -77,9 +76,8 @@ public class Triangulos {
                     System.out.println("Ok Dibujemos el triangulito al revés pues...");
                     System.out.println("Cuantas filas quieres?:");
                     
-                    entrada = in.nextLine();
-                    
-                    fila = Integer.parseInt(entrada);
+                    //ocupa failswitch:
+                    fila = in.nextInt();
                     
                     for(int i=1; i<= fila; i++){
                         for(int j=fila; j>=i; j--){
@@ -96,9 +94,8 @@ public class Triangulos {
                     System.out.println("Ok, ahora dibujemos el triangulito del otro lado");
                     System.out.println("Cuantas filas quieres?");
                     
-                    entrada = in.nextLine();
-                    
-                    fila = Integer.parseInt(entrada);
+                    //ocupa failswitch:
+                    fila = in.nextInt();
                                         
                     for(int i=1; i<= fila; i++){
                         
@@ -118,16 +115,14 @@ public class Triangulos {
                     System.out.println("Ok, ahora para el gran final, el dibujo al reves ");
                     System.out.println("Cuantas filas quieres?");
                     
-                    entrada= in.nextLine();                
-                    
-                    fila = Integer.parseInt(entrada);
+                    //ocupa failswitch:
+                    fila = in.nextInt();
                     
                     for(int i = 1 ; i <= fila; i++){
                         
                         for(int j=1; i>j ; j++){
                             System.out.print(" ");
-                        }
-                        
+                        }                        
                         for(int j =fila; j>=i; j--){
                             System.out.print("*");
                         }
@@ -142,9 +137,8 @@ public class Triangulos {
                         System.out.println("Ok, ahora dibujemos el triangulito del otro lado");
                         System.out.println("Cuantas filas quieres?");
                     
-                        entrada = in.nextLine();
-                    
-                        fila = Integer.parseInt(entrada);
+                        //ocupa failswitch:
+                        fila = in.nextInt();
                                         
                         for(int i=1; i<= fila; i++){
                         
@@ -168,9 +162,8 @@ public class Triangulos {
             }
             
             System.out.println("Elige una opcion de 1-5, 6 para salir");
-            entrada = in.nextLine();
-            
-            menu = Integer.parseInt(entrada);
+            //ocupa failswitch:
+            menu = in.nextInt();
         }
         
         
