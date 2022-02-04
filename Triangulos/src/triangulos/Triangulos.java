@@ -15,9 +15,10 @@ public class Triangulos {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Elige una opcion de 1-5");
+        System.out.println("Elige una opcion de 1-7");
         Scanner in = new Scanner(System.in);        
         
+        //ocupa failswitch:
         int entrada = in.nextInt();        
         int menu =  entrada;
         System.out.println(entrada);    
@@ -161,7 +162,7 @@ public class Triangulos {
                         break;
             }
             
-            System.out.println("Elige una opcion de 1-5, 6 para salir");
+            System.out.println("Elige una opcion de 1-6, 7 para salir");
             //ocupa failswitch:
             menu = in.nextInt();
         }
