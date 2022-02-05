@@ -19,7 +19,7 @@ public class Triangulos {
         
         //Empezamos por el menu
         System.out.println("|----------------------------------|");
-        System.out.println("|     Elige una opcion de 1-7      |");
+        System.out.println("|     Elige una opcion de 1-8      |");
         System.out.println("|----------------------------------|");
         System.out.println();        
         
