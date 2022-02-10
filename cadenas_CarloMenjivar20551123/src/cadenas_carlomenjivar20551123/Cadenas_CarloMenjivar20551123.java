@@ -65,11 +65,76 @@ public class Cadenas_CarloMenjivar20551123 {
                     else{
                         System.out.println("La palabra "+cadena1+" NO contiene la palabra "+cadena2);
                     }
+                    
+                    int countA=0;                 
+                    int countE=0;
+                    int countI=0;
+                    int countO=0;
+                    int countU=0;
+                    
+                    for (int i=0; i< cadena2.length(); i++){
+                        switch(cadena2.charAt(i)){
+                            case 'a':
+                                countA++;
+                                break;
+                            case 'e':
+                                countE++;
+                                break;
+                            case 'i':
+                                countI++;
+                                break;
+                            case 'o':
+                                countO++;
+                                break;
+                            case 'u':
+                                countU++;
+                                break;
+                        }
+                    }
+                    System.out.println("La frase tiene las siguientes Vocales:");
+                    System.out.println("A: "+ countA);
+                    System.out.println("E: "+ countE);
+                    System.out.println("I: "+ countI);
+                    System.out.println("O: "+ countO);
+                    System.out.println("U: "+ countU);
                     break;
                     
                 case 2:
+                    boolean containsWord = false;
+                    
                     System.out.println("Ejercicio 2");
                     
+                    System.out.println("Cadena 1");
+                    cadena1 = in.next();
+                    
+                    System.out.println("Cadena 2");
+                    cadena2 = in.next();
+                    
+                    System.out.println(cadena1);
+                    System.out.println(cadena2);
+                    cadena1 = cadena1.toLowerCase();
+                    cadena2 = cadena2.toLowerCase();
+                    
+                    String segmentoCadena1="";
+                    
+                    for(int i=0;((i+cadena2.length())<=(cadena1.length())); i++){
+                        
+                        segmentoCadena1= cadena1.substring(i, (i+cadena2.length()));
+                        
+                       if(segmentoCadena1.equals(cadena2)){
+                           System.out.println("La palabra "+cadena1+" SI contiene la palabra "+cadena2);                           
+                           containsWord = true;
+                       }
+                    }
+                    
+                    if(containsWord == false){
+                        System.out.println("La palabra "+cadena1+" NO contiene la palabra "+cadena2);
+                    }
+                    else{
+                        containsWord = false;
+                    }
+
+                    System.out.println("Fin de Ejercicio 2.");
                     break;
                 case 3:
                     System.out.println("Ejercicio 3");
