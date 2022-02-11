@@ -24,6 +24,48 @@ public class MenuMath {
         System.out.println("|--------presiona 4 para salir-----|");
         System.out.println();
         
+        //declaro Variables
+        int Menu;
+        int Numero;
+        
+        while(!in.hasNextInt()){
+            System.out.println("Introduce un Entero.");
+        }        
+        Menu = in.nextInt();
+        
+        switch(Menu){
+            case 1:
+                
+                System.out.println("Option 1 factorial");               
+                System.out.println("Ingrese un Numero");
+                
+                //Ingresamos un Entero
+                while(!in.hasNextInt()){
+                    System.out.println("Introduce un Entero.");
+                }        
+                Numero = in.nextInt();
+                
+                // Haremos el Factorial con un While
+                int factorial = Numero;
+                int i = Numero - 1;
+                
+                //While SENCILLO para hacer un Factorial
+                while (i>0){
+                    factorial *= i;
+                    i--;
+                }
+                System.out.println("Este es el factorial: ");
+                System.out.println(factorial);
+                
+                break;
+            
+            case 2:
+                System.out.println("Option 2");
+                break;
+            case 3:
+                System.out.println("Option 3");
+                break;
+        }
     }
     
 }
