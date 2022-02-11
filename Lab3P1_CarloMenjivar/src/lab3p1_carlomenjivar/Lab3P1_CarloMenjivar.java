@@ -65,7 +65,8 @@ public class Lab3P1_CarloMenjivar {
                     Entero = in.nextInt();
                     
                     for(i=0; i<=100; i++){
-                        A=(-1)^i;                     
+                        A=(-1)^i;
+                        B= (2*i+1);
                     }  
                     
                     break;
