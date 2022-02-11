@@ -29,87 +29,51 @@ public class Lab3P1_CarloMenjivar {
             System.out.println("Ingresa una opcion de 1-4");
             in.nextLine();
         }
-        int entrada = in.nextInt();
+        int menu= in.nextInt();
         
-        int menu =  entrada;
+        //Variables para el Ejercicio 1
+        double A;
+        double B;
+        double C;
+        int Entero;
+        //Variables para el Ejercicio 2        
         int fila;
-        int columna;
+        int columna;        
+        //Variables para el Ejercicio3
+        
+        
+        //Variables comunes
+        int i;
+        int j;
         
         while(menu!=4){
             
             System.out.println("|----------------------------------|");
-            System.out.println("| ok haremos el lab3p1 de Paulina  |");
+            System.out.println("| ok haremos el lab3p1             |");
             System.out.println("|----------------------------------|");
             
             switch(menu){
                 
                 case 1:
-                    System.out.println("|----------------------------------|");
-                    System.out.println("|     Elige una opcion de 1-3      |");
-                    System.out.println("|--------presiona 4 para salir-----|");
-                    System.out.println();        
-        
-                    // ailswitch:        
+                    System.out.println("El Ejercicio 1");
+                    
+                    //ocupaba*** failswitch:        
                     while(!in.hasNextInt()){
-                        System.out.println("Ingresa una opcion de 1-4");
+                        System.out.println("Ingresa una opcion de 0-10");
                         in.nextLine();
                     }
-                    entrada = in.nextInt();
+                    Entero = in.nextInt();
                     
-                    //variables:
-                    double respuesta=0;
-                    double n = -1;
-                    int cont;
-                    double A=-1;
-                    double B=1;
-                    double C=1; 
-                    double exp;
-                    double fact;
-                    
-                    // formula de sumatoria:
-                    for(int i=0 ; i<= 100 ; i++){
-                        
-                        // separe la formula en 3 partes mayores, SUMATORIA de i=0
-                        // hasta i=100 para A/B*C
-                        //A = (-1)^i
-                        for(cont = 0; cont<= i; cont++){
-                            A=A*n;
-                        }
-                        System.out.println(A);
-                        //B = (2i+1)!
-                        B = (2*i)+1;
-                        fact = B;
-                        //ciclo para el factorial
-                        for(cont=1; cont<=fact; cont++){
-                            B = B*cont;
-                        }
-                        System.out.println(B);
-                        
-                        // C = X^(2*i+1)
-                        exp = ((2*i)+1);                        
-                       
-                        for(cont =1 ; cont <= exp; cont++){
-                            C = C*entrada;
-                        }
-                        
-                        System.out.println(C);
-                        
-                        //respuesta+=((A/B)*C);
-                    }
-                    System.out.println(respuesta);
-                    System.out.println(A);
-                    System.out.println(B);
-                    System.out.println(C);
-                    
-                        
-                    System.out.println(respuesta);
+                    for(i=0; i<=100; i++){
+                        A=(-1)^i;                     
+                    }  
                     
                     break;
                 case 2:
                     
                     //Pedimos nuevamente el numero de filas
                     System.out.println("|----------------------------------|");
-                    System.out.println("| ok haremos el ejercio 2 Paulina  |");
+                    System.out.println("| ok haremos el ejercio 2          |");
                     System.out.println("|     dibujemos una casa, cuantas  |");
                     System.out.println("|           filas quieres?         |");
                     System.out.println("|         hay un minimo de 4       |");
@@ -120,8 +84,8 @@ public class Lab3P1_CarloMenjivar {
                     columna = fila;
                        
                     //for para dibujar el techo
-                    for(int i=1; i<= fila; i++){
-                        for(int j=fila; j>i ; j--){
+                    for(i=1; i<= fila; i++){
+                        for(j=fila; j>i ; j--){
                             System.out.print(" ");
                         }
                             
@@ -137,8 +101,8 @@ public class Lab3P1_CarloMenjivar {
                         System.out.println();
                     }                                                
                     //for para dibujar la base
-                    for(int i=1; i <= fila; i++){
-                        for(int j=0; j <= columna; j++){                        
+                    for(i=1; i <= fila; i++){
+                        for(j=0; j <= columna; j++){                        
                             System.out.print(" *");
                         }
                         System.out.println();
@@ -159,8 +123,8 @@ public class Lab3P1_CarloMenjivar {
                     columna = fila;
                     
                     //Algoritmo para el cuadrado del Ejercicio 4
-                    for(int i=1; i <= fila; i++){
-                        for(int j=1; j <= columna; j++){                        
+                    for( i=1; i <= fila; i++){
+                        for(j=1; j <= columna; j++){                        
                             
                             if(i==1 || j ==1 || i == fila || j == columna){
                                 if(i%2==0 || j%2!=0){
@@ -179,7 +143,17 @@ public class Lab3P1_CarloMenjivar {
                     
                     break;
             }
-            
+            System.out.println("|----------------------------------|");
+            System.out.println("|     Elige una opcion de 1-3      |");
+            System.out.println("|--------presiona 4 para salir-----|");
+            System.out.println();        
+
+            //ocupaba*** failswitch:        
+            while(!in.hasNextInt()){
+                System.out.println("Ingresa una opcion de 1-4");
+                in.nextLine();
+            }
+            menu= in.nextInt();
         }
         
         
