@@ -18,40 +18,62 @@ public class Cadenas_CarloMenjivar20551123 {
         // TODO code application logic here
         
         Scanner in = new Scanner(System.in);
+
+        int entrada;
         
-        //Empezamos por el menu
-        System.out.println("|----------------------------------|");
-        System.out.println("|     Elige una opcion de 1-5      |");
-        System.out.println("|--------presiona 6 para salir-----|");
-        System.out.println();        
-        
-        //ocupaba*** failswitch:        
-        while(!in.hasNextInt()){
-            System.out.println("Ingresa una opcion de 1-5");
-            in.nextLine();
-        }
-        int entrada = in.nextInt();
-        
-        int menu =  entrada;
+        int menu =  1;
         
         String cadena1; 
         String cadena2;
         
         while(menu!=6){
             
-            System.out.println("|----------------------------------|");
-            System.out.println("| ok haremos la Tarea S4T1         |");
-            System.out.println("|----------------------------------|");
+            //Imprimimos un menu llamativo y bonito
+            System.out.println("|-------------------------------------------------------|");
+            System.out.println("|---Semana 4 - Cadenas ---------------------------------|");
+            System.out.println("|-------------------------------------------------------|");
+            System.out.println("|-------------------------------------------------------|");            
+            System.out.println("|------------- Ingresa una opcion de 1-3 ---------------|");
+            System.out.println("|-------------------------------------------------------|");
+            System.out.println("|-------------------------------------------------------|");
+            System.out.println("|-------------------------------------------------------|");
+            //agregando efectos de drama a mi programa
+                    try{
+                        Thread.sleep(1000);
+                    } catch(InterruptedException ex){
+                        System.out.println("Igual no deberia de estar poniendo esto... so...");
+                    } 
+            System.out.println("|----Carlo Marcello Menjivar Montes de Oca -------------|");
+            System.out.println("|-----------------------------------------20551123------|");
+            System.out.println("|-------------------------------------------------------|");
+            //agregando efectos de drama a mi programa
+                    try{
+                        Thread.sleep(1000);
+                    } catch(InterruptedException ex){
+                        System.out.println("Igual no deberia de estar poniendo esto... so...");
+                    } 
+            System.out.println("|--------------------------- Exit with 6 !--------------|");
+            System.out.println("|-------------------------------------------------------|");
+            System.out.println("|-------------------------------------------------------|");
+            System.out.print(  "|-------------------------------------|:  ");
+            
+            //failswitch para asegurarnos que solo ingresen enteros
+            while(!in.hasNextInt()){
+                System.out.println("Ingresa una opcion de 1-3");
+                System.out.println("O puedes salir con 6");
+                in.nextLine();
+            }
+            menu = in.nextInt();           
             
             switch(menu){
                 
                 case 1:
-                    System.out.println("Ejercicio 1");
+                    System.out.println("Ejercicio 1 Usamos el metodo 'String.contains()'");
                     
-                    System.out.println("Cadena 1");
+                    System.out.println("Ingresa la primer Cadena 1");
                     cadena1 = in.next();
                     
-                    System.out.println("Cadena 2");
+                    System.out.println("Ingresa la segunda cadena a comparar Cadena 2");
                     cadena2 = in.next();
                     
                     System.out.println(cadena1);
@@ -102,7 +124,7 @@ public class Cadenas_CarloMenjivar20551123 {
                 case 2:
                     boolean containsWord = false;
                     
-                    System.out.println("Ejercicio 2");
+                    System.out.println("Ejercicio 2 - Se puso bueno, implementacion del contains hecho a pie");
                     
                     System.out.println("Cadena 1");
                     cadena1 = in.next();
@@ -145,14 +167,7 @@ public class Cadenas_CarloMenjivar20551123 {
                 case 5:
                     System.out.println("Ejercicio 5");
                     break;
-            }
-            
-            while(!in.hasNextInt()){
-                System.out.println("Ingresa una opcion de 1-5");
-                in.nextLine();
-             }
-            menu = in.nextInt();
-                                
+            }                                
         }
         
         
