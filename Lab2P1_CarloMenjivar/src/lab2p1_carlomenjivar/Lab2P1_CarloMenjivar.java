@@ -26,11 +26,13 @@ public class Lab2P1_CarloMenjivar {
         String Numero = "";
         String Multiplicador = "";
         int numeroMenu = Integer.parseInt(MenuS);
+        
         boolean salir = false;
         
         while(salir == false){
             
             switch(numeroMenu){
+                
                 case 1:
                     // Vamos a Imprimir el resultado de N*M
                     System.out.println("Vamos a realizar el siguiente ejercicio:");
@@ -62,19 +64,20 @@ public class Lab2P1_CarloMenjivar {
                     int pos3 = 1;
                     int posN = 0;
 
-                    System.out.println( pos1 );
-                    System.out.println( pos2 );
-                    System.out.println( pos3 );
+                    System.out.print( pos1+", ");
+                    System.out.print( pos2+", ");
+                    System.out.print( pos3+", ");
                     while( j < Integer.parseInt(Numero)){
                         posN = pos3 + pos2 + pos1;
                         pos1 = pos2;
                         pos2 = pos3;
                         pos3 = posN;
-                        System.out.println(pos3);
+                        System.out.print(pos3+", ");
                         j++;
                     }
-
+                    System.out.println();
                     break;
+                    
                 case 3:
                     
                     System.out.println("Vamos a realizar el siguiente ejercicio:");
@@ -93,6 +96,7 @@ public class Lab2P1_CarloMenjivar {
                     salir = true;
                     break;
             }
+            
             if ( salir == false){
                 System.out.println("Elige una opcion 1 - 4");
                 MenuS = in.nextLine();
