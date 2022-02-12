@@ -18,18 +18,21 @@ public class Lab2P1_CarloMenjivar {
         // TODO code application logic here
         //Switch de Menu
         System.out.println("Hello");
-        System.out.println("Elige una opcion de 1-4");
-        
         Scanner in = new Scanner(System.in);
-        String MenuS = in.nextLine();
         
-        String Numero = "";
-        String Multiplicador = "";
-        int numeroMenu = Integer.parseInt(MenuS);
+        String Numero;
+        String Multiplicador;
         
         boolean salir = false;
         
         while(salir == false){
+            System.out.println("Ingresa un numero Entero de 1-4");
+            while(!in.hasNextInt()){
+                System.out.println("Ingresa un numero Entero de 1-4");
+                in.nextInt();
+            }
+            int numeroMenu = in.nextInt();
+            in.nextLine();
             
             switch(numeroMenu){
                 
@@ -67,6 +70,7 @@ public class Lab2P1_CarloMenjivar {
                     System.out.print( pos1+", ");
                     System.out.print( pos2+", ");
                     System.out.print( pos3+", ");
+                    
                     while( j < Integer.parseInt(Numero)){
                         posN = pos3 + pos2 + pos1;
                         pos1 = pos2;
@@ -83,26 +87,37 @@ public class Lab2P1_CarloMenjivar {
                     System.out.println("Vamos a realizar el siguiente ejercicio:");
                     System.out.println("Ejercicio 3");
                     System.out.println("Necesito ingreses la cantidad de N...");
-                    Numero = in.nextLine();
-
+                    
+                    //failswitch para evitar no entren enteros...
+                    while(!in.hasNextInt()){
+                        System.out.println("Ingrese un numero Entero para la cantidad de N: ");
+                        in.nextLine();
+                    }
+                    int entero = in.nextInt();
+                    
+                    //variables que ocupo
                     int k = 0;
-                    while (k <= Integer.parseInt(Numero)){
+                    double division;
+                    double raiz=0.0;
+                    
+                    //Algoritmo matematico
+                    while (k <= entero){
+                        division = (1.0/((4.0*k+2)*(4.0*k+2)));
+                        if(k==0){
+                            raiz = (1-division)/1;
+                        }else{
+                            raiz = raiz*((1-division)/1);
+                        }                        
                         k++;
                     }
-                    System.out.println("Lo siento esta opcion no es valida ");
+                    System.out.println(1/raiz);
+                    
                     break;
                 case 4:
                     System.out.println("Por que te quieres salir de mi juego? :'( ");
                     salir = true;
                     break;
-            }
-            
-            if ( salir == false){
-                System.out.println("Elige una opcion 1 - 4");
-                MenuS = in.nextLine();
-                numeroMenu = Integer.parseInt(MenuS);
-            }
-                
+            }                
         }    
     }
     
