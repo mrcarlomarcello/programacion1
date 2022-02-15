@@ -33,8 +33,10 @@ public class Lab3P1_CarloMenjivar {
         
         //Variables para el Ejercicio 1
         double A;
-        double B;
+        int B;
         double C;
+        double sumatoria=0;
+        double factorial;
         int Entero;
         //Variables para el Ejercicio 2        
         int fila;
@@ -45,6 +47,7 @@ public class Lab3P1_CarloMenjivar {
         //Variables comunes
         int i;
         int j;
+        int g;  
         
         while(menu!=4){
             
@@ -65,9 +68,31 @@ public class Lab3P1_CarloMenjivar {
                     Entero = in.nextInt();
                     
                     for(i=0; i<=100; i++){
+                        
                         A=(-1)^i;
+                        
                         B= (2*i+1);
+                        
+                        C= Entero^(2*i+1);
+                        
+                        // Haremos el Factorial con un While
+                        factorial = B;
+                        g = B - 1;
+
+                        //While SENCILLO para hacer un Factorial
+                        if(factorial!=0){
+                            while (g>0){
+                                factorial *= g;
+                                g--;
+                            }
+                        }
+                        else{
+                            factorial =1;
+                        }
+                        
+                        sumatoria = sumatoria + ((A/factorial)*C);
                     }  
+                    System.out.println(sumatoria);
                     
                     break;
                 case 2:
