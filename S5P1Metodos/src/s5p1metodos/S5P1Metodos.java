@@ -15,6 +15,8 @@ public class S5P1Metodos {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        String cadena = "Casa blanca";
+        System.out.println(cadena.substring(5, cadena.length()));
     }
     
 }
