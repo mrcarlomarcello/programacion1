@@ -33,11 +33,13 @@ public class Lab3P1_CarloMenjivar {
         
         //Variables para el Ejercicio 1
         double A;
-        int B;
+        double B;
         double C;
         double sumatoria=0;
         double factorial;
+        double calculo;
         int Entero;
+        
         //Variables para el Ejercicio 2        
         int fila;
         int columna;        
@@ -58,6 +60,7 @@ public class Lab3P1_CarloMenjivar {
             switch(menu){
                 
                 case 1:
+                    sumatoria = 0;
                     System.out.println("El Ejercicio 1");
                     
                     //ocupaba*** failswitch:        
@@ -71,13 +74,11 @@ public class Lab3P1_CarloMenjivar {
                         
                         A=(-1)^i;
                         
-                        B= (2*i+1);
-                        
-                        C= Entero^(2*i+1);
+                        B= (2*i+1);                                                
                         
                         // Haremos el Factorial con un While
                         factorial = B;
-                        g = B - 1;
+                        g = (int)B - 1;
 
                         //While SENCILLO para hacer un Factorial
                         if(factorial!=0){
@@ -85,12 +86,15 @@ public class Lab3P1_CarloMenjivar {
                                 factorial *= g;
                                 g--;
                             }
-                        }
-                        else{
+                        }else{
                             factorial =1;
                         }
                         
-                        sumatoria = sumatoria + ((A/factorial)*C);
+                        C= Entero^((2*i)+1);                        
+                        
+                        //sumatoria = sumatoria + ((A/factorial)*C);
+                        calculo = ((A/factorial)*C);
+                        sumatoria += calculo;
                     }  
                     System.out.println(sumatoria);
                     
