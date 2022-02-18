@@ -69,11 +69,32 @@ public class MenuMath {
                 
                 double A;
                 double B;
+                double C;
+                double fact = 1;
+                int n;
+                double calculo;
+                double sumatoria=0;
                 
                 for(i=0; i<=100; i++){
-                                                
+                    
+                    // calculo la primer parte (-1)^i                    
+                    A = (-1^i);
+                    
+                    //calculo el factorial
+                    n =(2*i)+1;
+                    
+                    for (int j=2; j<=n; j++){
+                        fact = fact * j;                        
+                    }
+                    
+                    //calculo la multiplicacion
+                    C = X^n;
+
+                    //realizo el calculo de las formulas
+                    calculo=(A/fact)*C;
+                    sumatoria += calculo;
                 }
-                                    
+                System.out.println(sumatoria);
                 break;
                 
             case 3:
