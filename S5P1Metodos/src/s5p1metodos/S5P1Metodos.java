@@ -164,15 +164,24 @@ public class S5P1Metodos {
                     
                 case 3:
                     System.out.println("Ejercicio 3");
+                    System.out.println("Llamaremos el Metodo contarVocales");
+                    
+                    System.out.println("Ingresa la primer Cadena 1");
+                    cadena1 = in.next();
+                    int vocales = contarVocales(cadena1);
+                    
+                    System.out.println("Tiene "+vocales+" vocales");
                     break;
                     
-                case 4:
-                    System.out.println("Ejercicio 4");
-                    break;
+                //*   
+                //case 4:
+                //    System.out.println("Ejercicio 4");
+                //    break;
                     
-                case 5:
-                    System.out.println("Ejercicio 5");
-                    break;
+                //case 5:
+                //   System.out.println("Ejercicio 5");
+                //    break;
+                    
             }                                
         }
         
@@ -180,10 +189,13 @@ public class S5P1Metodos {
     }
     
     public static int contarVocales(String palabra) {
-        int contador;
+        int contador=0;
         
-        contador = 1;
-        
-        return 0;
+        for(int i=0; i<palabra.length(); i++){
+            if( palabra.charAt(i)== 'a' || palabra.charAt(i)== 'e' || palabra.charAt(i)== 'i' || palabra.charAt(i)== 'o' || palabra.charAt(i)== 'u'){
+                contador++;
+            }
+        }                  
+        return contador;
     }
 }
