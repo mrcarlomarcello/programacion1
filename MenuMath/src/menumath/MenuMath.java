@@ -61,7 +61,21 @@ public class MenuMath {
             
             case 2:
                 System.out.println("Option 2");
+                while(!in.hasNextInt()){
+                    System.out.println("Ingresa una opcion de 0-10");
+                    in.nextLine();
+                }                
+                int X = in.nextInt();
+                
+                double A;
+                double B;
+                
+                for(i=0; i<=100; i++){
+                                                
+                }
+                                    
                 break;
+                
             case 3:
                 System.out.println("Option 3");
                 break;
