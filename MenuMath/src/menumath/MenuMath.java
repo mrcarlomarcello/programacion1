@@ -60,6 +60,7 @@ public class MenuMath {
                 break;
             
             case 2:
+                
                 System.out.println("Option 2");
                 while(!in.hasNextInt()){
                     System.out.println("Ingresa una opcion de 0-10");
@@ -67,33 +68,36 @@ public class MenuMath {
                 }                
                 int X = in.nextInt();
                 
-                double A;
-                double B;
-                double C;
-                double fact = 1;
-                int n;
-                double calculo;
-                double sumatoria=0;
+                double sumatoria =0.0;
                 
                 for(i=0; i<=100; i++){
                     
-                    // calculo la primer parte (-1)^i                    
-                    A = (-1^i);
+                    // Parte Superior (-1^i)
+                    int base = (-1);
+                    double power = 1;                    
+                    for(int k = 1; k <=i; k++){ power = power*base;}
                     
-                    //calculo el factorial
-                    n =(2*i)+1;
+                    // Parte de Abajo (2i+1)! factorial
+                    base = (2*i)+1;
                     
-                    for (int j=2; j<=n; j++){
-                        fact = fact * j;                        
+                    // Haremos el Factorial con un While
+                    double factorial2 = base;
+                    int g = base - 1;
+                        //While SENCILLO para hacer un Factorial
+                    while (g>0){
+                        factorial2 *= g;
+                        g--;
                     }
                     
-                    //calculo la multiplicacion
-                    C = X^n;
-
-                    //realizo el calculo de las formulas
-                    calculo=(A/fact)*C;
-                    sumatoria += calculo;
+                    // La multiplicacion derecha x^(2i+1)
+                    int c = (2*i+1);
+                    double power2 = 1;
+                    for(int k = 1; k <=c; k++){ power2 = power2*X;}
+                    
+                    sumatoria = sumatoria + ((power/factorial2)*power2);
                 }
+                
+                
                 System.out.println(sumatoria);
                 break;
                 

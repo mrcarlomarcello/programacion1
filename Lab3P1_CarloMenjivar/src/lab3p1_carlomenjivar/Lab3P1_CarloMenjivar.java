@@ -31,15 +31,6 @@ public class Lab3P1_CarloMenjivar {
         }
         int menu= in.nextInt();
         
-        //Variables para el Ejercicio 1
-        double A;
-        double B;
-        double C;
-        double sumatoria=0;
-        double factorial;
-        double calculo;
-        int Entero;
-        
         //Variables para el Ejercicio 2        
         int fila;
         int columna;        
@@ -48,8 +39,7 @@ public class Lab3P1_CarloMenjivar {
         
         //Variables comunes
         int i;
-        int j;
-        int g;  
+        int j; 
         
         while(menu!=4){
             
@@ -60,44 +50,45 @@ public class Lab3P1_CarloMenjivar {
             switch(menu){
                 
                 case 1:
-                    sumatoria = 0;
                     System.out.println("El Ejercicio 1");
-                    
+                    System.out.println("Ingresa un numero (de preferencia 6 y 9 para revisarlo)");
                     //ocupaba*** failswitch:        
                     while(!in.hasNextInt()){
                         System.out.println("Ingresa una opcion de 0-10");
                         in.nextLine();
                     }
-                    Entero = in.nextInt();
                     
-                    for(i=0; i<=100; i++){
-                        
-                        A=(-1)^i;
-                        
-                        B= (2*i+1);                                                
-                        
-                        // Haremos el Factorial con un While
-                        factorial = B;
-                        g = (int)B - 1;
+                    int X = in.nextInt();
+                
+                    double sumatoria =0.0;
 
-                        //While SENCILLO para hacer un Factorial
-                        if(factorial!=0){
-                            while (g>0){
-                                factorial *= g;
-                                g--;
-                            }
-                        }else{
-                            factorial =1;
+                    for(i=0; i<=100; i++){
+
+                        // Parte Superior (-1^i)
+                        int base = (-1);
+                        double power = 1;                    
+                        for(int k = 1; k <=i; k++){ power = power*base;}
+
+                        // Parte de Abajo (2i+1)! factorial
+                        base = (2*i)+1;
+
+                        // Haremos el Factorial con un While
+                        double factorial2 = base;
+                        int g = base - 1;
+                            //While SENCILLO para hacer un Factorial
+                        while (g>0){
+                            factorial2 *= g;
+                            g--;
                         }
-                        
-                        C= Entero^((2*i)+1);                        
-                        
-                        //sumatoria = sumatoria + ((A/factorial)*C);
-                        calculo = ((A/factorial)*C);
-                        sumatoria += calculo;
-                    }  
+
+                        // La multiplicacion derecha x^(2i+1)
+                        int c = (2*i+1);
+                        double power2 = 1;
+                        for(int k = 1; k <=c; k++){ power2 = power2*X;}
+
+                        sumatoria = sumatoria + ((power/factorial2)*power2);
+                    }
                     System.out.println(sumatoria);
-                    
                     break;
                 case 2:
                     
@@ -151,21 +142,26 @@ public class Lab3P1_CarloMenjivar {
                     //ocupa failswitch:
                     fila = in.nextInt();                        
                     columna = fila;
-                    
+                    int contadorImpresion =0;
                     //Algoritmo para el cuadrado del Ejercicio 4
                     for( i=1; i <= fila; i++){
                         for(j=1; j <= columna; j++){                        
                             
                             if(i==1 || j ==1 || i == fila || j == columna){
-                                if(i%2==0 || j%2!=0){
+                                if(contadorImpresion%2==0){
                                     System.out.print("J");
+                                    contadorImpresion++;
                                 }
                                 else{
                                     System.out.print("A");
+                                    contadorImpresion++;
                                 }
                             }
                             else{
                                 System.out.print(" ");
+                            }                            
+                            if(j==columna){
+                                contadorImpresion++;
                             }
                         }
                         System.out.println();
