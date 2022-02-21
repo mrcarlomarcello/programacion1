@@ -9,59 +9,62 @@ import java.util.Scanner;
  * @author megam
  */
 public class S6_Metodo_euler {
-Scanner in = new Scanner(System.in);
+
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+        Scanner in = new Scanner(System.in);
         
         System.out.print("X = ");
 
-        int x = in.nextInt
+        int x = in.nextInt();
                 
                 
         System.out.print("M = ");
         int m = in.nextInt();
         
-        Sumatoria(m, x);
+        System.out.println(Sumatoria(m, x));
         
   
     }
     
-    public static int Sumatoria(int m, int x){
+    public static double Sumatoria(int m, int x){
         double Sumatoria = 0.0;
         
         for (int n = 0; n <= m; n++) {
-            int expo = Exponential(n,x);
-            
+            int expo = Exponential(n,x);           
+            int facto = Factorial(n);            
+            Sumatoria += (expo/facto);
         }
-     
+             
         
+        return Sumatoria;
     }
     
     public static int Exponential(int base, int power){
         
-                      
-        for(int k = 1; k <=i; k++){ power = power*base;}
-                        
-        return potencia;
+        int exponential=1;
+         //haremos el for para exponential           
+        for(int k = 1; k <=power; k++){ exponential = exponential*base;}
+        //
+        return exponential;
     }
     
-    public static int Factorial(){
+    public static int Factorial(int n){
         
-        
-        // Haremos el Factorial con un While
-                        double factorial2 = base;
-                        int g = base - 1;
-                            //While SENCILLO para hacer un Factorial
-                        while (g>0){
-                            factorial2 *= g;
-                            g--;
-                        }
-        ///                
+        int factorial = n;
+        // Haremos el Factorial con un for
+         if(n==0||n==1){
+              factorial =1;  
+            }
+         else{
+            for(int i = n-1; i>=1; i--){factorial*=i;}                
+         }
+        /// 
         return factorial;
+        
     }
     
 }
