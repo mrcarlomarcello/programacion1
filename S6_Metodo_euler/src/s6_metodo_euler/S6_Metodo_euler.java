@@ -34,7 +34,7 @@ public class S6_Metodo_euler {
         double Sumatoria = 0.0;
         
         for (int n = 0; n <= m; n++) {
-            double expo = Exponential(n,x);           
+            double expo = Exponential(x,n);           
             double facto = Factorial(n);            
             Sumatoria += (expo/facto);
         }
