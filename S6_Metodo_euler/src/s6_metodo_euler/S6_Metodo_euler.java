@@ -34,8 +34,8 @@ public class S6_Metodo_euler {
         double Sumatoria = 0.0;
         
         for (int n = 0; n <= m; n++) {
-            int expo = Exponential(n,x);           
-            int facto = Factorial(n);            
+            double expo = Exponential(n,x);           
+            double facto = Factorial(n);            
             Sumatoria += (expo/facto);
         }
              
@@ -43,18 +43,18 @@ public class S6_Metodo_euler {
         return Sumatoria;
     }
     
-    public static int Exponential(int base, int power){
+    public static double Exponential(int base, int power){
         
-        int exponential=1;
+        double exponential=1;
          //haremos el for para exponential           
         for(int k = 1; k <=power; k++){ exponential = exponential*base;}
         //
         return exponential;
     }
     
-    public static int Factorial(int n){
+    public static double Factorial(int n){
         
-        int factorial = n;
+        double factorial = n;
         // Haremos el Factorial con un for
          if(n==0||n==1){
               factorial =1;  
