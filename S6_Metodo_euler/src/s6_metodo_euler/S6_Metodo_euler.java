@@ -18,27 +18,24 @@ public class S6_Metodo_euler {
         Scanner in = new Scanner(System.in);
         
         System.out.print("X = ");
-
         int x = in.nextInt();
-                
-                
+                           
         System.out.print("M = ");
         int m = in.nextInt();
         
         System.out.println(Sumatoria(m, x));
         
-  
     }
     
     public static double Sumatoria(int m, int x){
         double Sumatoria = 0.0;
-        
+        double expo = 0.0;
+        double facto = 0.0;
         for (int n = 0; n <= m; n++) {
-            double expo = Exponential(x,n);           
-            double facto = Factorial(n);            
+            expo = Exponential(x,n);           
+            facto = Factorial(n);            
             Sumatoria += (expo/facto);
-        }
-             
+        }      
         
         return Sumatoria;
     }
