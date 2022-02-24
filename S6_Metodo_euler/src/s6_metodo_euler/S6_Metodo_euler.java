@@ -23,14 +23,14 @@ public class S6_Metodo_euler {
         System.out.print("M = ");
         int m = in.nextInt();
         
-        System.out.println(Euler(m, x));
+        System.out.println(Sumatoria(m, x));
         
         int [] prueba = LlenarEnteros(m);
         
         imprimirArray(prueba);
     }
     
-    public static double Euler(int m, int x){
+    public static double Sumatoria(int m, int x){
         double Sumatoria = 0.0;
         double expo = 0.0;
         double facto = 0.0;
