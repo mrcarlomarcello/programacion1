@@ -25,6 +25,9 @@ public class S6_Metodo_euler {
         
         System.out.println(Sumatoria(m, x));
         
+        int [] prueba = LlenarEnteros(m);
+        
+        imprimirArray(prueba);
     }
     
     public static double Sumatoria(int m, int x){
@@ -64,4 +67,21 @@ public class S6_Metodo_euler {
         
     }
     
+    public static int [] LlenarEnteros(int size){
+        int [] temp = new int[size];
+        
+        for(int i = 0; i < temp.length; i++){
+            temp[i] =i;
+        }
+        
+        return temp;
+    }
+    
+    public static void imprimirArray(int [] temp){
+        
+        for(int i = 0; i<temp.length; i++)
+        {
+            System.out.println(temp[i]);
+        }
+    }
 }
