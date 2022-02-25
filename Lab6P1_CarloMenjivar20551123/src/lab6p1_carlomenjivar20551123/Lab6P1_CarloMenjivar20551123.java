@@ -87,7 +87,14 @@ public class Lab6P1_CarloMenjivar20551123 {
                 case 4:
                     System.out.println("Esto ha sido todo amigos! :) ");
                     break;
+                    
             }
+             //agregando efectos de drama a mi programa
+                    try{
+                        Thread.sleep(2500);
+                    } catch(InterruptedException ex){
+                        System.out.println("Igual no deberia de estar poniendo esto... so...");
+                    } 
         }
     }
     
@@ -174,7 +181,7 @@ public class Lab6P1_CarloMenjivar20551123 {
         int contador = 0;
         for(int i=0;i<passphrase.length();i++){
             if(passphrase.charAt(i)=='X'){
-                System.out.print('X');
+                //System.out.print('X');
                 contador++;
             }
         }
@@ -183,7 +190,7 @@ public class Lab6P1_CarloMenjivar20551123 {
         contador =0;
         for(int i=0;i<passphrase.length();i++){
             if(passphrase.charAt(i)=='X'){
-                System.out.print('X');
+                //System.out.print('X');
                 pin[contador]=temp[apuntador];
                 contador+=1;
             }
