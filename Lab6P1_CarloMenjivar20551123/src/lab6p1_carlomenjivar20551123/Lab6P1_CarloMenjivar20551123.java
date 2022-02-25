@@ -35,7 +35,7 @@ public class Lab6P1_CarloMenjivar20551123 {
                 case 1:
                     System.out.println("Ejercicio 1");
                     int n = 1 + random.nextInt(99);
-                    int [] arregloEjercicio1 = LlenarEnteros(n);
+                    int [] arregloEjercicio1 = LlenarEnteros(n,999);
                     
                     imprimirArray(arregloEjercicio1);
                     n = random.nextInt(1, 9);
@@ -46,10 +46,43 @@ public class Lab6P1_CarloMenjivar20551123 {
                     break;
                     
                 case 2:
-                    System.out.println("Ejercicio 2");
+                    System.out.println("Ejercicio 2 - Turing");
+                    System.out.println("Ingresa un numero real: ");
+                    
+                    while(!in.hasNextInt()){
+                        System.out.println("Ingresa un numero");
+                        in.nextLine();
+                    }                    
+                    int turingNumber = in.nextInt();
+                                        
+                    int [] cadena = LlenarEnteros(turingNumber, 9);
+                    
+                    System.out.println("Se genero tu plantilla de Token: ");
+                    imprimirArray(cadena);
+                    
+                    System.out.println("Ingresa tu frase secreta: ");
+                    
+                    in.nextLine();
+                    String passphrase = in.nextLine();
+                    
+                    System.out.println("Tu frase secreta es:");
+                    System.out.println(passphrase);
+                    
+                    int [] pin = turingPin(cadena, passphrase);
+                    
+                    System.out.println("Tu Pin de Seguridad es: ");
+                    imprimirArray(pin);
+                    
                     break;
+                
                 case 3:
+                    
                     System.out.println("Ejercicio 3");
+                    int N = 1 + random.nextInt(99);
+                    System.out.println("Vamos a imprimir un arreglo de Size: "+N);
+                    int [] arregloEjercicio2 = LlenarEnteros(N,100);
+                    imprimirArray(arregloEjercicio2);
+                    System.out.println("El promedio de este arreglo es: "+ Promedio(arregloEjercicio2));
                     break;
                 case 4:
                     System.out.println("Esto ha sido todo amigos! :) ");
@@ -91,13 +124,12 @@ public class Lab6P1_CarloMenjivar20551123 {
     }
     
     //Llena un arreglo de int size con numeros de 0-999
-    public static int [] LlenarEnteros(int size){
-        int [] temp = new int[size];
+    public static int [] LlenarEnteros(int size, int n){
         
+        int [] temp = new int[size];        
         for(int i = 0; i < temp.length; i++){
-            temp[i] = random.nextInt(999);
-        }
-        
+            temp[i] = random.nextInt(n);
+        }        
         return temp;
     }
     
@@ -134,5 +166,51 @@ public class Lab6P1_CarloMenjivar20551123 {
         }
         
         return temp;
+    }
+    
+    //ALGORITMOS PARA EL EJERCICIO #2
+    public static  int [] turingPin(int [] temp, String passphrase){
+        int apuntador =0;
+        int contador = 0;
+        for(int i=0;i<passphrase.length();i++){
+            if(passphrase.charAt(i)=='X'){
+                System.out.print('X');
+                contador++;
+            }
+        }
+        //Creamos un Array del tamano que contamos de X
+        int [] pin = new int[contador];        
+        contador =0;
+        for(int i=0;i<passphrase.length();i++){
+            if(passphrase.charAt(i)=='X'){
+                System.out.print('X');
+                pin[contador]=temp[apuntador];
+                contador+=1;
+            }
+            if(passphrase.charAt(i)=='R'){
+                apuntador+=1;
+                if(apuntador>=pin.length){
+                    apuntador=0;
+                }
+            }
+            if(passphrase.charAt(i)=='L'){
+                apuntador-=1;
+                if(apuntador<0){
+                    apuntador=pin.length-1;
+                }
+            }
+        }       
+        return pin;
+    }
+    
+    //ALGORITMO EJERCICIO#3
+    public static double Promedio(int [] temp){
+        double promedio = 0.0;
+        
+        for(int i = 0; i<temp.length; i++){
+            promedio +=temp[i];
+        }
+        promedio = promedio/temp.length;
+        return promedio;
     }
 }
