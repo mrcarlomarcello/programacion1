@@ -52,6 +52,7 @@ public class S6_Metodo_euler {
         //
         return exponential;
     }
+    
     //retorna un Factorial
     public static double Factorial(int n){
         
@@ -67,6 +68,7 @@ public class S6_Metodo_euler {
         return factorial;
         
     }    
+    
     //Llena un arreglo de int size con numeros de 0-999
     public static int [] LlenarEnteros(int size){
         int [] temp = new int[size];
@@ -77,6 +79,7 @@ public class S6_Metodo_euler {
         
         return temp;
     }
+    
     //imprime bonito Arreglos hasta XXX [ X ] [ XX] [XXX]
     public static void imprimirArray(int [] temp){
         
@@ -91,5 +94,14 @@ public class S6_Metodo_euler {
             }
             
         }
+    }
+    
+    //no lo he terminado
+    public static int [] arregloPares(int[] arregloEntrada){
+        int tamano = 0;
+        
+        int [] arregloPares = new int[arregloEntrada.length];
+        
+        return arregloPares;
     }
 }
