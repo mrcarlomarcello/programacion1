@@ -29,6 +29,10 @@ public class S6_Metodo_euler {
         int [] prueba = LlenarEnteros(m);
         
         imprimirArray(prueba);
+        
+        int [] Pares = arregloPares(prueba);
+        
+        imprimirArray(Pares);
     }
     //calcula el Euler
     public static double Euler(int m, int x){
@@ -96,12 +100,26 @@ public class S6_Metodo_euler {
         }
     }
     
-    //no lo he terminado
+    //Al parecer esta arreglado pero hay que revisarlo
     public static int [] arregloPares(int[] arregloEntrada){
+        
         int tamano = 0;
         
-        int [] arregloPares = new int[arregloEntrada.length];
+        for(int i=0; i<arregloEntrada.length; i++){
+            if(arregloEntrada[i]%2==0){
+                tamano++;
+            }
+        }
+        int [] arregloPares = new int[tamano];
         
+        //reseteamos el contador
+        tamano=0;
+        for(int i=0; i<arregloEntrada.length; i++){
+            if(arregloEntrada[i]%2==0){
+                arregloPares[tamano]=arregloEntrada[i];
+                tamano++;
+            }
+        }
         return arregloPares;
     }
 }
