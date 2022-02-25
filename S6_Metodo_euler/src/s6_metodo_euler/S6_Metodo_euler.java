@@ -4,18 +4,19 @@
  */
 package s6_metodo_euler;
 import java.util.Scanner;
+import java.util.Random;
 /**
  *
  * @author megam
  */
 public class S6_Metodo_euler {
-
+    static Scanner in = new Scanner(System.in);
+    static Random random = new Random();
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        Scanner in = new Scanner(System.in);
+        // TODO code application logic here        
         
         System.out.print("X = ");
         int x = in.nextInt();
@@ -23,14 +24,14 @@ public class S6_Metodo_euler {
         System.out.print("M = ");
         int m = in.nextInt();
         
-        System.out.println(Sumatoria(m, x));
+        System.out.println(Euler(m, x));
         
         int [] prueba = LlenarEnteros(m);
         
         imprimirArray(prueba);
     }
-    
-    public static double Sumatoria(int m, int x){
+    //calcula el Euler
+    public static double Euler(int m, int x){
         double Sumatoria = 0.0;
         double expo = 0.0;
         double facto = 0.0;
@@ -42,7 +43,7 @@ public class S6_Metodo_euler {
         
         return Sumatoria;
     }
-    
+    //calcula un double de exponencial
     public static double Exponential(int base, int power){
         
         double exponential=1;
@@ -51,7 +52,7 @@ public class S6_Metodo_euler {
         //
         return exponential;
     }
-    
+    //retorna un Factorial
     public static double Factorial(int n){
         
         double factorial = n;
@@ -65,23 +66,30 @@ public class S6_Metodo_euler {
         /// 
         return factorial;
         
-    }
-    
+    }    
+    //Llena un arreglo de int size con numeros de 0-999
     public static int [] LlenarEnteros(int size){
         int [] temp = new int[size];
         
         for(int i = 0; i < temp.length; i++){
-            temp[i] =i;
+            temp[i] = random.nextInt(999);
         }
         
         return temp;
     }
-    
+    //imprime bonito Arreglos hasta XXX [ X ] [ XX] [XXX]
     public static void imprimirArray(int [] temp){
         
         for(int i = 0; i<temp.length; i++)
         {
-            System.out.println(temp[i]);
+            if(temp[i]>99){
+                System.out.println("["+temp[i]+"]");
+            }else if(temp[i]>9){
+                System.out.println("[ "+temp[i]+"]");
+            }else{
+                System.out.println("[ "+temp[i]+" ]");
+            }
+            
         }
     }
 }
