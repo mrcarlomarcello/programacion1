@@ -54,13 +54,19 @@ public class Lab6P1_CarloMenjivar20551123 {
                         in.nextLine();
                     }                    
                     int turingNumber = in.nextInt();
+                    
+                    //Validacion extra
+                    if(turingNumber < 1){
+                        System.out.println("Cambiamos tu Numero a 9");
+                        turingNumber = 9;
+                    }
                                         
                     int [] cadena = LlenarEnteros(turingNumber, 9);
                     
                     System.out.println("Se genero tu plantilla de Token: ");
                     imprimirArray(cadena);
                     
-                    System.out.println("Ingresa tu frase secreta: ");
+                    System.out.println("Ingresa tu frase secreta: L R X son los comandos.");
                     
                     in.nextLine();
                     String passphrase = in.nextLine();
