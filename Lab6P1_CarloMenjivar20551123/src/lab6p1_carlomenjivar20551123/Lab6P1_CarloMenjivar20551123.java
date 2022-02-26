@@ -185,31 +185,37 @@ public class Lab6P1_CarloMenjivar20551123 {
     public static  int [] turingPin(int [] temp, String passphrase){
         int apuntador =0;
         int contador = 0;
+        //CONTAMOS LAS X
         for(int i=0;i<passphrase.length();i++){
             if(passphrase.charAt(i)=='X'){
                 //System.out.print('X');
                 contador++;
             }
         }
+        
         //Creamos un Array del tamano que contamos de X
-        int [] pin = new int[contador];        
+        int [] pin = new int[contador];
+        //reinicio el contador
         contador =0;
+        
         for(int i=0;i<passphrase.length();i++){
             if(passphrase.charAt(i)=='X'){
-                //System.out.print('X');
+                //System.out.println(apuntador);
                 pin[contador]=temp[apuntador];
                 contador+=1;
             }
             if(passphrase.charAt(i)=='R'){
                 apuntador+=1;
-                if(apuntador>=pin.length){
+                //System.out.println(apuntador);
+                if(apuntador==temp.length){
                     apuntador=0;
                 }
             }
             if(passphrase.charAt(i)=='L'){
                 apuntador-=1;
+                //System.out.println(apuntador);
                 if(apuntador<0){
-                    apuntador=pin.length-1;
+                    apuntador=temp.length-1;
                 }
             }
         }       
