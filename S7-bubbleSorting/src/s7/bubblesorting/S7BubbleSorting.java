@@ -53,8 +53,8 @@ public class S7BubbleSorting {
         }
         
         // Binary search O Busqueda Binaria
-        binarySearch(arregloOrdenado, buscarNumero);
-        
+        boolean found = binarySearch(arregloOrdenado, buscarNumero);
+        System.out.println(found);
     }
     
     //Quiero un metodo para leer Enteros...
@@ -133,16 +133,15 @@ public class S7BubbleSorting {
         int MAX=temp.length;
         int index=MAX/2;
         
-        while(index!=0){
+        while(found!=true){
             if(buscar==temp[index]){
                 found = true;
                 System.out.println("Elemento encontrado");
-                break;
             }else if(buscar<temp[index]){
-                MAX=index;
+                MAX=index-1;
                 index=(MAX-MIN)/2;
             }else if(buscar>temp[index]){
-                MIN=index;
+                MIN=index+1;
                 index=(MAX-MIN)/2;
             }
                 
