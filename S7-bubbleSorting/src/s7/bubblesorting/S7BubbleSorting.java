@@ -18,16 +18,40 @@ public class S7BubbleSorting {
     public static void main(String[] args) {
         // TODO code application logic here
         int size = 100;
+        int max = 99;
         
-        int [] arregloDesorden = LlenarEnteros(size, 99);
+        int [] arregloDesorden = LlenarEnteros(size, max);
         int [] arregloOrdenado = new int[arregloDesorden.length];
         imprimirArray(arregloDesorden);
         
+        //bubble implementation
         for(int i=0; i<arregloDesorden.length; i++){
             arregloOrdenado = bubbleSort(arregloDesorden);
         }
+        
+        System.out.println("Esta es la impresión de la variable el arreglo original after sorting");
         imprimirArray(arregloDesorden);
+        System.out.println("Esta esta es la impresión de la segunda variable 'temp' que es la que debería de cambiar");
         imprimirArray(arregloOrdenado);
+        
+        // AGREGANDO SEARCHINDEX
+        System.out.println("Ingresa un numero real: ");
+                    
+        while(!in.hasNextInt()){
+            System.out.println("Ingresa un numero real...");
+            in.nextLine();
+        }
+        int buscarnumero = in.nextInt();
+        
+        int index = searchIndex(arregloOrdenado, buscarnumero);
+        
+        if(index != -1){
+            System.out.println("Encontramos el index con nuestro metodo linear: " + index);
+            System.out.println("El arreglo["+index+"]: "+arregloOrdenado[index]);
+        }else{
+            System.out.println("No encontramos tu número...");
+        }       
+        
     }
     //Llena un arreglo de int size con numeros de 0-999
     public static int [] LlenarEnteros(int size, int max){
@@ -71,6 +95,21 @@ public class S7BubbleSorting {
             
         }
         return tempArray;
+    }
+    
+    //linear Sorting
+    public static int searchIndex(int [] temp, int number){
+        int index = -1;
+        System.out.println("Length: "+ temp.length);
+        
+        for(int i= 0; i<temp.length;i++){
+            System.out.println("Iter: "+i);
+            if(temp[i]==number){
+                index = i;
+                break;
+            }
+        }
+        return index;
     }
     
 }
