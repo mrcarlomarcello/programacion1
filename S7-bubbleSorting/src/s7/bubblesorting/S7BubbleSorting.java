@@ -17,42 +17,56 @@ public class S7BubbleSorting {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+
+        //Creamos los arreglos
         int size = 100;
         int max = 99;
-        
         int [] arregloDesorden = LlenarEnteros(size, max);
         int [] arregloOrdenado = new int[arregloDesorden.length];
         imprimirArray(arregloDesorden);
         
-        //bubble implementation
+        
+        //BUBBLE implementation
         for(int i=0; i<arregloDesorden.length; i++){
             arregloOrdenado = bubbleSort(arregloDesorden);
         }
-        
+        //pruebas
         System.out.println("Esta es la impresión de la variable el arreglo original after sorting");
         imprimirArray(arregloDesorden);
         System.out.println("Esta esta es la impresión de la segunda variable 'temp' que es la que debería de cambiar");
         imprimirArray(arregloOrdenado);
         
+        
         // AGREGANDO SEARCHINDEX
         System.out.println("Ingresa un numero real: ");
-                    
-        while(!in.hasNextInt()){
-            System.out.println("Ingresa un numero real...");
-            in.nextLine();
-        }
-        int buscarnumero = in.nextInt();
-        
-        int index = searchIndex(arregloOrdenado, buscarnumero);
+        //Mi método para leer enteros            
+        int buscarNumero = leerEntero();
+        //Mi método para busqueda lineal, me retorba -1 si no encuentra el index
+        int index = searchIndex(arregloOrdenado, buscarNumero);
         
         if(index != -1){
             System.out.println("Encontramos el index con nuestro metodo linear: " + index);
             System.out.println("El arreglo["+index+"]: "+arregloOrdenado[index]);
         }else{
             System.out.println("No encontramos tu número...");
-        }       
+        }
+        
+        // Binary search O Busqueda Binaria
+        binarySearch(arregloOrdenado, buscarNumero);
         
     }
+    
+    //Quiero un metodo para leer Enteros...
+    public static int leerEntero(){
+        while(!in.hasNextInt()){
+            System.out.println("Ingresa un numero real...");
+            in.nextLine();
+        }
+        int buscarnumero = in.nextInt();
+        return buscarnumero;
+    }
+    
     //Llena un arreglo de int size con numeros de 0-999
     public static int [] LlenarEnteros(int size, int max){
         
@@ -110,6 +124,33 @@ public class S7BubbleSorting {
             }
         }
         return index;
+    }
+    
+    //Binary Search (necesita estar sorteado)
+    public static boolean binarySearch(int [] temp, int buscar){
+        boolean found =false;
+        int MIN=0;
+        int MAX=temp.length;
+        int index=MAX/2;
+        
+        while(index!=0){
+            if(buscar==temp[index]){
+                found = true;
+                System.out.println("Elemento encontrado");
+                break;
+            }else if(buscar<temp[index]){
+                MAX=index;
+                index=(MAX-MIN)/2;
+            }else if(buscar>temp[index]){
+                MIN=index;
+                index=(MAX-MIN)/2;
+            }
+                
+        }
+        
+        if(found==false)
+            System.out.println("Not found");
+        return found;        
     }
     
 }
