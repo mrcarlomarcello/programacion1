@@ -19,7 +19,7 @@ public class S7BubbleSorting {
         // TODO code application logic here
         
 
-        //Creamos los arreglos
+        //Creamos los arreglos Random
         int size = 100;
         int max = 99;
         int [] arregloDesorden = LlenarEnteros(size, max);
@@ -36,7 +36,6 @@ public class S7BubbleSorting {
         imprimirArray(arregloDesorden);
         System.out.println("Esta esta es la impresión de la segunda variable 'temp' que es la que debería de cambiar");
         imprimirArray(arregloOrdenado);
-        
         
         // AGREGANDO SEARCHINDEX
         System.out.println("Ingresa un numero real: ");
@@ -137,6 +136,7 @@ public class S7BubbleSorting {
             if(buscar==temp[index]){
                 found = true;
                 System.out.println("Elemento encontrado");
+                break;
             }else if(buscar<temp[index]){
                 MAX=index-1;
                 index=(MAX-MIN)/2;
