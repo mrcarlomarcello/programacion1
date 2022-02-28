@@ -17,7 +17,7 @@ public class S7BubbleSorting {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int size = 50;
+        int size = 100;
         
         int [] arregloDesorden = LlenarEnteros(size, 99);
         int [] arregloOrdenado = new int[arregloDesorden.length];
@@ -65,7 +65,7 @@ public class S7BubbleSorting {
             if(tempArray[i]>=step){
                 tempArray[pos]=tempArray[i];
                 tempArray[i]=step;
-                imprimirArray(tempArray);
+                //imprimirArray(tempArray);
             }
             if(pos==(tempArray.length-1)){i++;}
             
