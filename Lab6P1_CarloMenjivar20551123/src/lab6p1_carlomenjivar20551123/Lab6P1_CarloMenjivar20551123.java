@@ -137,11 +137,11 @@ public class Lab6P1_CarloMenjivar20551123 {
     }
     
     //Llena un arreglo de int size con numeros de 0-999
-    public static int [] LlenarEnteros(int size, int n){
+    public static int [] LlenarEnteros(int size, int max){
         
         int [] temp = new int[size];        
         for(int i = 0; i < temp.length; i++){
-            temp[i] = random.nextInt(n);
+            temp[i] = random.nextInt(max);
         }        
         return temp;
     }
