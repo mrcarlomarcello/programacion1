@@ -52,8 +52,14 @@ public class S7BubbleSorting {
         }
         
         // Binary search O Busqueda Binaria
-        boolean found = binarySearch(arregloOrdenado, buscarNumero);
-        System.out.println(found);
+        //boolean found = binarySearch(arregloOrdenado, buscarNumero);
+        //System.out.println(found);
+        
+        int n = 0;
+        String mensaje = "Hello World";
+        
+        metodos_arreglos metodos = new metodos_arreglos(mensaje, n);
+        
     }
     
     //Quiero un metodo para leer Enteros...
