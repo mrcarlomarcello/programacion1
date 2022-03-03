@@ -9,6 +9,7 @@ import java.util.Random;
  *
  * @author shello101
  */
+//nota de cambio
 public class metodos_arreglos {
     private Scanner in = new Scanner(System.in);
     private Random random = new Random();
