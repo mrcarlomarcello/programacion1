@@ -88,23 +88,23 @@ public class metodos_arreglos {
         boolean found =false;
         int MIN=0;
         int MAX=temp.length;
-        int index=MAX/2;
+        int index;
         
-        while(found!=true){
+        while(MIN<MAX){                        
+            index = (MAX + MIN)/2;
+            
             if(buscar==temp[index]){
                 found = true;
                 System.out.println("Elemento encontrado");
-                break;
-            }else if(buscar<temp[index]){
-                MAX=index-1;
-                index=(MAX-MIN)/2;
-            }else if(buscar>temp[index]){
-                MIN=index+1;
-                index=(MAX-MIN)/2;
+                return found;
             }
-                
+            if(buscar<temp[index]){
+                MAX=index-1;
+            }
+            if(buscar>temp[index]){
+                MIN=index+1; 
+            }               
         }
-        
         if(found==false)
             System.out.println("Not found");
         return found;        

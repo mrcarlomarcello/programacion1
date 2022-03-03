@@ -42,7 +42,8 @@ public class S7BubbleSorting {
             System.out.println("No encontramos tu número...");
         }
         // Binary search O Busqueda Binaria
-        //boolean found = binarySearch(arregloOrdenado, buscarNumero);
-        //System.out.println(found);        
+        System.out.println("Buscaremos :"+ buscarNumero);
+        boolean found = method.binarySearch(arregloOrdenado, buscarNumero);
+        System.out.println(found);        
     }            
 }
