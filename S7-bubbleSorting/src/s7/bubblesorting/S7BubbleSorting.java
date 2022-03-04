@@ -44,6 +44,11 @@ public class S7BubbleSorting {
         // Binary search O Busqueda Binaria
         System.out.println("Buscaremos :"+ buscarNumero);
         boolean found = method.binarySearch(arregloOrdenado, buscarNumero);
-        System.out.println(found);        
+        System.out.println(found);
+        
+        //probando Tarea
+        method.setArray(arregloOrdenado);
+        int [] newArray = method.getArray();        
+        method.imprimirArray(newArray);
     }            
 }

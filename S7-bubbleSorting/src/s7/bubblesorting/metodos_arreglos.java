@@ -14,6 +14,15 @@ public class metodos_arreglos {
     private Scanner in = new Scanner(System.in);
     private Random random = new Random();
     
+    int size;
+    int [] temp;
+    
+    public int[] getArray(){
+        return this.temp;
+    }
+    public void setArray(int [] temp){
+        this.temp=temp;
+    }
     //Quiero un metodo para leer Enteros...
     public int leerEntero(){
         while(!in.hasNextInt()){
@@ -37,6 +46,8 @@ public class metodos_arreglos {
     //imprime bonito Arreglos hasta XXX [ X ] [ XX] [XXX]
     public void imprimirArray(int [] temp){
         
+        this.temp = temp;
+        
         for(int i = 0; i<temp.length; i++)
         {
             if(temp[i]>99){
@@ -53,6 +64,8 @@ public class metodos_arreglos {
     
     //sort tipo Bubble, pero tiene que correrse N cantidad de veces segun el length del arreglo... VER EL MAIN*
     public int [] bubbleSort(int [] tempArray){
+        
+        this.temp = tempArray;
         
         for(int i = 0; i < tempArray.length; i++){
             int pos = i+1;
