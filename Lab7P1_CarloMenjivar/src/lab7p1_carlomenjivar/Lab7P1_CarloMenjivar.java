@@ -3,16 +3,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package lab7p1_carlomenjivar;
-
+import java.util.Scanner;
 // Author @shello
 
 public class Lab7P1_CarloMenjivar {
     
     
     static executeAlgo execute = new executeAlgo();
-    static miscClass misc = new miscClass();
-    
-    static int menu = 0;
+    static miscClass misc = new miscClass();    
+    static int menu = 0;    
     
     public static void main(String[] args) {
         // TODO code application logic here
@@ -32,8 +31,7 @@ public class Lab7P1_CarloMenjivar {
                     case 3 -> {                        
                         execute.ejercicioTres();
                 }
-            }
-           
+            }            
         }
         
     }

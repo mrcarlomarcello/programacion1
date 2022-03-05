@@ -71,14 +71,15 @@ public class miscClass {
     //Quiero un metodo para leer Cadenas...(retorna una cadena)
     public String leerCadena(){
         System.out.println("Ingresa una cadena: ");              
-        String tempstring = in.nextLine();
+        String tempstring = in.nextLine();               
         return tempstring;
     }
     
     //Quiero un metodo para leer caracteres
     public char leerChar(){
         System.out.println("Ingresa un character de separacion: (* , &  @ | # ... etc )");        
-        char caracter = in.next().charAt(0);        
+        char caracter = in.nextLine().charAt(0);
+                
         return caracter;
     }
     

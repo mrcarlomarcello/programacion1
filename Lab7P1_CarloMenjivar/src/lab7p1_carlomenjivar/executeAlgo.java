@@ -28,7 +28,7 @@ public class executeAlgo {
         //imprime la respuesta del ejercicio 1
         for (String respuesta11 : respuesta1) {
             System.out.println(respuesta11);
-        }
+        }        
         
     }
     //Pasos del Ejercicio 2
@@ -44,8 +44,10 @@ public class executeAlgo {
         //respuesta del ejercicio 2
         this.misc.imprimirArray(num.primos());        
     }
+    
     //Pasos del Ejercicio 3
     public void ejercicioTres(){
+        
         System.out.println("Ejercicio 3 - Ingrese el tamaño del arreglo: ");
         this.size = misc.leerEntero();        
         //constructor solicitado del ejercicio
