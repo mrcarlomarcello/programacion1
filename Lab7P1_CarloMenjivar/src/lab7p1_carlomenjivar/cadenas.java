@@ -12,19 +12,20 @@ public class cadenas {
         this.caracter = caracter;
     }
 
-    //Sets y Gets
-    public String getcadena(){
-        return cadena;
-    }    
+    //Sets y Gets porque tengo que practicar :)        
     public void setcadena(String cadena){
         this.cadena = cadena;
     }    
-    public char getcaracter(){
-        return caracter;
-    }    
     public void setcaracter(char caracter){
         this.caracter = caracter;
-    }    
+    }
+    public String getcadena(){
+        return cadena;
+    }
+    public char   getcaracter(){
+        return caracter;
+    }        
+        
     //ALGORITMOS PARA EL EJERCICIO #1
     public String [] turingSearch(String passphrase, char caracter){
         
@@ -35,14 +36,26 @@ public class cadenas {
                 //System.out.print('X');
                 contador++;
             }
-        }        
+        }
+        
+        //sin este if no me agarraba el ultimo espacio
+        if(passphrase.charAt(passphrase.length()-1) != caracter){
+            contador++;
+        }
+        
         //Creamos un Array del tamano que contamos de Caracteres
         String [] cadena = new String[contador];        
         String temp ="";
         contador = 0;
         
+        //agrego la palabra
+        int tope = passphrase.length()-1;
+        
         for(int i=0;i<passphrase.length();i++){
-            if(passphrase.charAt(i)==caracter){
+            if(i==(tope) && passphrase.charAt(tope)!= caracter){
+                temp += passphrase.charAt(i);
+                cadena[contador] = temp;
+            }else if(passphrase.charAt(i)==caracter){
                 cadena[contador] = temp;
                 contador+=1;
                 temp = "";
@@ -53,5 +66,12 @@ public class cadenas {
         }    
         
         return cadena;
+    }
+    
+    //Metodo que imprime la respuesta del ejercicio uno (pero en general imprime los strings de un arreglo)
+    public void imprimirRespuestaEjercicio1(String [] Respuesta){
+        for (String respuesta : Respuesta) {
+            System.out.println(respuesta);
+        }
     }
 }

@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package lab7p1_carlomenjivar;
-import java.util.Scanner;
 // Author @shello
 
 public class Lab7P1_CarloMenjivar {

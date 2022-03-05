@@ -65,6 +65,7 @@ public class miscClass {
             this.in.nextLine();
         }
         int buscarnumero = in.nextInt();
+        in.nextLine();
         return buscarnumero;
     }
     
