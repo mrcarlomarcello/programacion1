@@ -11,6 +11,7 @@ public class Lab7P1_CarloMenjivar {
     
     static executeAlgo execute = new executeAlgo();
     static miscClass misc = new miscClass();
+    
     static int menu = 0;
     
     public static void main(String[] args) {

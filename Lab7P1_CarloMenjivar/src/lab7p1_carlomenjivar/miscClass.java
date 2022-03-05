@@ -40,9 +40,26 @@ public class miscClass {
             System.out.print(  "|-----------------------------|: ");
     }
     
+    //imprime bonito Arreglos hasta XXX [ X ] [ XX] [XXX]
+    public void imprimirArray(int [] temp){
+        
+        for(int i = 0; i<temp.length; i++)
+        {
+            if(temp[i]>99){
+                System.out.print("["+temp[i]+"]");
+            }else if(temp[i]>9){
+                System.out.print("[ "+temp[i]+"]");
+            }else{
+                System.out.print("[ "+temp[i]+" ]");
+            }
+            System.out.print(" ");
+        }
+        System.out.println();
+    }
+    
     //Quiero un metodo para leer Enteros...(retorna un entero)
     public int leerEntero(){
-        System.out.println("Ingresa un numero 1-4: ");
+        System.out.println("Ingresa un numero: ");
         while(!this.in.hasNextInt()){
             System.out.println("Ingresa un numero real...");
             this.in.nextLine();
@@ -53,10 +70,16 @@ public class miscClass {
     
     //Quiero un metodo para leer Cadenas...(retorna una cadena)
     public String leerCadena(){
-        System.out.println("Ingresa una cadena: ");
-        in.nextLine();        
+        System.out.println("Ingresa una cadena: ");              
         String tempstring = in.nextLine();
         return tempstring;
+    }
+    
+    //Quiero un metodo para leer caracteres
+    public char leerChar(){
+        System.out.println("Ingresa un character de separacion: (* , &  @ | # ... etc )");        
+        char caracter = in.next().charAt(0);        
+        return caracter;
     }
     
     //Llena un arreglo de int size con numeros de 0-999
