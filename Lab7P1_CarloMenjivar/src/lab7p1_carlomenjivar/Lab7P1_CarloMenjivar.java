@@ -7,11 +7,12 @@ package lab7p1_carlomenjivar;
 
 public class Lab7P1_CarloMenjivar {
     
-    
+    //porque las neceito las escribo aquí 
     static executeAlgo execute = new executeAlgo();
     static miscClass misc = new miscClass();    
     static int menu = 0;    
     
+    //mi lindo main
     public static void main(String[] args) {
         // TODO code application logic here
         
