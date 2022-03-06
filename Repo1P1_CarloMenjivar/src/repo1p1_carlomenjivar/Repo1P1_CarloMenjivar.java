@@ -1,20 +1,32 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package repo1p1_carlomenjivar;
-
-/**
- *
- * @author shello101
- */
+//author @shello101
 public class Repo1P1_CarloMenjivar {
-
-    /**
-     * @param args the command line arguments
-     */
+    
+    static miscClass misc = new miscClass();
+    static executeAlgorithm execute = new executeAlgorithm();    
+    static int menu=0;
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        while(menu!=4){
+            
+            misc.printTheMenu();
+            menu = misc.leerEntero();
+            
+            switch(menu){                
+                case 1 -> {
+                    execute.ejercicio1();
+                }
+                case 2 -> {
+                    execute.ejercicio2();
+                }
+                case 3 -> {
+                    execute.ejercicio3();
+                }
+            }
+        }
+        
     }
     
 }
