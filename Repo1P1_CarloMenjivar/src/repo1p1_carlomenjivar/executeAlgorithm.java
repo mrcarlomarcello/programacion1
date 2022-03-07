@@ -17,15 +17,18 @@ public class executeAlgorithm {
         double result;
         
         for(int i = 0; i<= M; i++){
+            
             top = mate.exponencial((-1.0), i);
-            down = (2.0*i)+1.0;
-            result = top/down;
-            pie +=  result;
+            
+            down = (2.0*(double)i)+1.0;
+            
+            result = (double)top/(double)down;
+            
+            pie = pie +  result;
         }
         
         System.out.println("pie es: " + pie); 
-        
-        //System.out.println("Mi exponencial de 9^3 para revisar :"+ mate.exponencial(9.0, 3));
+
     }
     
     //Algoritmo del ejercicio 2
@@ -48,6 +51,7 @@ public class executeAlgorithm {
         int limit = comando.length();
         String cadena;
         String param="";
+        
         for(int i =0; i < limit-3; i++){
             if(comando.charAt(i) == '-'){
                 cadena = comando.substring(i+3, limit);
@@ -57,8 +61,7 @@ public class executeAlgorithm {
                         break;
                     }
                     param += cadena.charAt(j);
-                }
-                
+                }                
                 System.out.println(comando.charAt(i+1)+": "+param);
                 param="";
             }
