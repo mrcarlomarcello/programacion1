@@ -17,12 +17,15 @@ public class Repo1P1_CarloMenjivar {
             switch(menu){                
                 case 1 -> {
                     execute.ejercicio1();
+                    break;
                 }
                 case 2 -> {
                     execute.ejercicio2();
+                    break;
                 }
                 case 3 -> {
                     execute.ejercicio3();
+                    break;
                 }
             }
         }
