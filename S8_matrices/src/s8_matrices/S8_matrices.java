@@ -14,7 +14,7 @@ public class S8_matrices {
         while(menu!=7){
             
             misc.printTheMenu();
-            menu = misc.leerEntero();
+            menu = misc.dialogLeerEntero();
             
             switch(menu){
                 case 1:

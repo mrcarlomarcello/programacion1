@@ -1,9 +1,11 @@
 
 package s8_matrices;
+import javax.swing.JOptionPane;
 import java.util.Scanner;
         
 public class miscellaneous {
-    private final Scanner in = new Scanner(System.in);
+    
+    private final Scanner in = new Scanner(System.in);    
     
     //Imprime mi menu
     public void printTheMenu(){
@@ -38,14 +40,16 @@ public class miscellaneous {
     }
     
     //Quiero un metodo para leer Enteros...(retorna un entero)
-    public int leerEntero(){
-        System.out.println("Ingresa un numero: ");
-        while(!this.in.hasNextInt()){
-            System.out.println("Ingresa un numero real...");
-            this.in.nextLine();
-        }
-        int buscarnumero = in.nextInt();
-        in.nextLine();
+    public int dialogLeerEntero(){
+        //System.out.println("Ingresa un numero: ");
+        //while(!this.in.hasNextInt()){
+        //    System.out.println("Ingresa un numero real...");
+        //    this.in.nextLine();
+        //}
+        //int buscarnumero = in.nextInt();
+        int buscarnumero = Integer.parseInt(JOptionPane.showInputDialog("Ingresa un Número: "));
+        
+   
         return buscarnumero;
     }
     
