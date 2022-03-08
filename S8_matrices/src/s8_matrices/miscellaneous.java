@@ -1,12 +1,11 @@
 
 package s8_matrices;
 import javax.swing.JOptionPane;
-import java.util.Scanner;
+//import java.util.Scanner;
         
 public class miscellaneous {
     
-    private final Scanner in = new Scanner(System.in);    
-    
+   //private final Scanner in = new Scanner(System.in);        
     //Imprime mi menu
     public void printTheMenu(){
             //Imprimimos un menu llamativo y bonito
@@ -41,6 +40,7 @@ public class miscellaneous {
     
     //Quiero un metodo para leer Enteros...(retorna un entero)
     public int dialogLeerEntero(){
+        
         //System.out.println("Ingresa un numero: ");
         //while(!this.in.hasNextInt()){
         //    System.out.println("Ingresa un numero real...");
