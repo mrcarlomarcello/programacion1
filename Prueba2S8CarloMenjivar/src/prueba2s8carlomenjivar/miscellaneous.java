@@ -32,6 +32,23 @@ public class miscellaneous {
         System.out.println();
     }
     
+    //imprime bonito Arreglos hasta XXX [ X ] [ XX] [XXX]
+    public void imprimirChar(int [] temp){
+        
+        for(int i = 0; i<temp.length; i++)
+        {
+            if(temp[i]>99){
+                System.out.print("["+(char)temp[i]+"]");
+            }else if(temp[i]>9){
+                System.out.print("[ "+(char)temp[i]+"]");
+            }else{
+                System.out.print("[ "+(char)temp[i]+" ]");
+            }
+            System.out.print(" ");
+        }
+        System.out.println();
+    }
+    
     //Quiero un metodo para leer Enteros...(retorna un entero)
     public int leerEntero(){
         System.out.println("Ingresa un numero: ");

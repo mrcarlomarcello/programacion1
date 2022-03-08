@@ -8,18 +8,21 @@ public class numeros {
     int [] arregloEnteros;
     int [] temp;
 
-    public int[] getArregloEnteros() {
-        return arregloEnteros;
-    }
-
-    public void setArregloEnteros(int[] arregloEnteros) {
-        this.arregloEnteros = arregloEnteros;
-    }
-    
     public void numeros(int size){
         this.arregloEnteros = misc.LlenarEnteros(size, 9);        
     }
     
+    //get
+    public int[] getArregloEnteros() {
+        return arregloEnteros;
+    }
+    
+    //set
+    public void setArregloEnteros(int[] arregloEnteros) {
+        this.arregloEnteros = arregloEnteros;
+    }       
+    
+    //Para ponerlos en Orden
     public int [] bubbleSort(int [] tempArray){
         
         this.temp = tempArray;
@@ -36,5 +39,29 @@ public class numeros {
             
         }
         return tempArray;
+    }
+    
+    //Para poner los pares primero
+    public int [] ordenSort(int [] temp, int paresLimit){
+        
+        int [] paresPrimero = new int [temp.length];        
+        int contpares = 0;
+        
+        for(int i = 0; i < temp.length; i++){
+            if(temp[i]%2==0){
+                paresPrimero[contpares]=temp[i];
+                contpares++;
+            }
+        }
+                
+        for(int i = 0; i < temp.length; i++){
+            if(temp[i]%2!=0){
+                paresPrimero[contpares]=temp[i];
+                contpares++;
+            }
+        }
+        
+        
+        return paresPrimero;
     }
 }
