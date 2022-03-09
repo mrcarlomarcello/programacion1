@@ -30,4 +30,39 @@ public class mate {
             System.out.println();
         }
     }
+    
+    public String sandwich2(int limit){
+        String [][] sandwich = new String[limit][limit];
+        String sandwichtext = "";
+        for(int i = 0 ; i< limit; i++){
+            for(int j=0; j < limit; j++){
+                if(i==j){
+                    sandwich[i][j] = "   ";
+                }else if(i == 0 || j == 0 || i == (limit-1) || j == (limit-1)){
+                    sandwich[i][j] = " * ";   
+                }else if((j-1)==i){
+                    sandwich[i][j] = " * ";
+                }else if((j+1)==i){
+                    sandwich[i][j] = " * ";
+                }else {
+                    sandwich[i][j] = " + ";   
+                }                
+            }
+        }
+        
+        //for(int i = 0 ; i< limit; i++){
+        //    for(int j=0; j < limit; j++){
+        //        System.out.print(sandwich[i][j]);
+        //    }
+        //    System.out.println();
+        //}
+        
+        for(int i = 0 ; i< limit; i++){
+            for(int j=0; j < limit; j++){
+                sandwichtext += sandwich[i][j];
+            }
+            sandwichtext += "\n";
+        }
+        return sandwichtext;        
+    }
 }

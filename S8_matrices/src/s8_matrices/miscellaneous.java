@@ -53,5 +53,7 @@ public class miscellaneous {
         return buscarnumero;
     }
     
-    
+    public void dialogSandwhich( String Sandwich){
+        JOptionPane.showConfirmDialog(null, Sandwich);
+    }
 }
