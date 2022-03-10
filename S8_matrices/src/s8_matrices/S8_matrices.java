@@ -18,19 +18,25 @@ public class S8_matrices {
             
             switch(menu){
                 case 1:
+                    // Crear una matriz global
                     execute.ejercicio1();
                     break;
                 case 2:
+                    //suma de filas
                     execute.ejercicio2();
                     break;
                 case 3:
+                    //suma columnas
                     execute.ejercicio3();
                     break;
                 case 4:
+                    //encontrar un numero
                     break;
                 case 5:
+                    //recibe una matriz desordenada y lo pasa a arreglo, lo ordena y lo pasa a matriz
                     break;
                 case 6:
+                    //matriz de caracteres
                     break;
             }
         }
