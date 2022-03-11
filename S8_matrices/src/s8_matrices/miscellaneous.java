@@ -56,4 +56,6 @@ public class miscellaneous {
     public void dialogSandwhich( String Sandwich){
         JOptionPane.showConfirmDialog(null, Sandwich);
     }
+    
+    
 }

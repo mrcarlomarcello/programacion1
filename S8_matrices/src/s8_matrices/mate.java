@@ -1,8 +1,11 @@
 
 package s8_matrices;
-
+import java.util.Random;
 
 public class mate {
+    
+    static final Random random =  new Random();
+    public int [][] matrix;
     
     public void sandwich(int limit){
         String [][] sandwich = new String[limit][limit];
@@ -64,5 +67,37 @@ public class mate {
             sandwichtext += "\n";
         }
         return sandwichtext;        
+    }
+    
+    public int [][] llenarMatriz(int x, int y){
+        matrix =  new int [y][x];
+        int row = matrix.length;
+        int column = matrix[0].length;
+        int cont = 0;
+        for(int i =0; i < column; i++){
+            for(int j =0; j < row ; j ++){
+                matrix[j][i] =  cont;
+                cont++;
+            }
+        }
+        return matrix;
+    }
+    
+    public void imprimirMatrix(int [][] temp){
+        
+        int row = temp.length;
+        int column = temp[0].length;
+        
+        for (int i = 0; i < column ; i++){
+            for (int j = 0; j < row; j++){
+                if(temp[j][i]<10){
+                    System.out.print("  " + temp[j][i] + " ");
+                }else{
+                    System.out.print(" " + temp[j][i] + " ");
+                }
+                
+            }
+            System.out.println();
+        }
     }
 }

@@ -5,8 +5,14 @@ package s8_matrices;
 public class executeAlgo {
     static final mate mate = new mate();
     static final miscellaneous misc = new miscellaneous();
+    public int [][] matrix;
     
     public void ejercicio1(){
+        matrix = mate.llenarMatriz(10, 10);
+        mate.imprimirMatrix(matrix);
+    }
+    
+    public void ejercicio1b(){
         
         System.out.println("Ejercicio 1 - Ingresa un numero igual o mayor a 7");
         
