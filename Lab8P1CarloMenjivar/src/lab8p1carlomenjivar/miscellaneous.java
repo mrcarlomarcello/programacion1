@@ -4,6 +4,7 @@
  */
 package lab8p1carlomenjivar;
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -55,6 +56,34 @@ public class miscellaneous {
         int buscarnumero = in.nextInt();
         in.nextLine();
         return buscarnumero;
+    }
+    
+    public void dialog( String Temp){
+        JOptionPane.showConfirmDialog(null, Temp);
+    }
+    
+    public String crearString( String [][] temp){
+        String text ="";
+        
+        for(int i = 0 ; i< temp.length; i++){
+            for(int j=0; j < temp[0].length; j++){
+                text += " " + temp[j][i] + " ";
+            }
+            text += "\n";
+        }
+        return text;
+        
+    }
+    
+    public String creardeInt ( int [][] temp){
+        String text ="";
+        for(int i = 0 ; i< temp.length; i++){
+            for(int j=0; j < temp[0].length; j++){
+                text += " " + temp[i][j] + " ";
+            }
+            text += "\n";
+        }
+        return text;
     }
     
 }

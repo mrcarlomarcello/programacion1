@@ -11,8 +11,12 @@ import java.util.Random;
 public class matrixClass {
     
     private int [][] matrix;
+    private String [][] chones;
     private final Random random = new Random();
-
+    
+    public String [][] getChones(){
+        return chones;
+    }
     public int[][] getMatrix() {
         return matrix;
     }
@@ -93,21 +97,90 @@ public class matrixClass {
     }
     
     //chones funcion
-    public int [][] chones(int size){
-        int [][] chones = new int[size][size];        
+    public String [][] chones(int size){
+        chones = new String[size][size];
+        int mid = (size/2);
         
+        for(int i =0; i< size;i++){
+            for(int j =0; j<size;j++){
+                
+                if(i==0){
+                    chones[i][j] = "*";
+                }else if(j==0 || i == size-1){
+                    chones[i][j] = "*";
+                }else if(j==mid && i==mid){
+                    chones[i][j] = "*";
+                }else if(j==mid && (i== mid-1 || i == mid+1 || i== size-1)){
+                    chones[i][j] = "*";
+                }else if(j>mid && (i== mid-1 || i == mid+1 || i== size-1)){
+                    chones[i][j] = "*";
+                }else if(i == mid && j>mid){
+                    chones[i][j]=" ";
+                }else if((j==size-1 || j==mid-1) && j>mid){
+                    chones[i][j]="*";
+                }else{
+                    chones[i][j]="+";
+                }                
+            }
+        }
         return chones;
     }
     
-    //flip function
+    //imprime una matrix de Chones
+    public void imprimirChones(String [][] temp){
+        
+        int row = temp.length;
+        int column = temp[0].length;
+        
+        for (int i = 0; i < column ; i++){
+            for (int j = 0; j < row; j++){
+                System.out.print(" " + temp[j][i] + " ");                
+            }
+            System.out.println();
+        }
+    }
     
+    //flip Vertical function    
+    public int [][] flippedV (int [][] matrix){
+        int col = matrix.length;
+        int row = matrix[0].length;
+        int posRow = row-1;
+        int [][] temp =  new int [col][row];
+        
+        System.out.println("Rows = " + row);
+        System.out.println("Cols = " + col);
+
+        for(int i =0; i < row; i++){
+            for(int j =0; j < col ; j ++){
+                //matrix[j][i] =  cont;
+                //cont++;
+                temp[j][posRow]=matrix[j][i];                
+            }
+            posRow--;
+        }        
+        return temp;
+    }
+    
+    //flip Horizontal function
     public int [][] flippedH (int [][] matrix){
         int col = matrix.length;
         int row = matrix[0].length;
+        int posCol = col-1;
         int [][] temp =  new int [col][row];
         
-        System.out.println(row);
-        System.out.println(col);        
+        System.out.println("Rows = " + row);
+        System.out.println("Cols = " + col);
+
+
+        for(int i =0; i < row; i++){
+            for(int j =0; j < col ; j ++){
+                //matrix[j][i] =  cont;
+                //cont++;
+                temp[posCol][i]=matrix[j][i];
+                posCol--;
+            }
+            posCol = col-1;
+        }        
         return temp;
     }
 }
