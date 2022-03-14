@@ -35,6 +35,7 @@ public class S8_matrices {
                     //encontrar un numero
                     break;
                 case 5:
+                    execute.ejercicio5();
                     //recibe una matriz desordenada y lo pasa a arreglo, lo ordena y lo pasa a matriz
                     break;
                 case 6:

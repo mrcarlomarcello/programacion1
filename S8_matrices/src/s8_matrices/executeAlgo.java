@@ -33,6 +33,11 @@ public class executeAlgo {
         mate.encontrarNumero(this.matrix, 5);
     }
     
+    public void ejercicio5(){
+        System.out.println("Ejercicio 5 - Funciones");
+        mate.yfunciondex(this.matrix);
+    }
+    
     public void ejercicio7(){
         
         System.out.println("Ejercicio 1 - Ingresa un numero igual o mayor a 7");
@@ -58,4 +63,6 @@ public class executeAlgo {
         this.matrix = mate.llenarMatrizOrdenada(mate.getMatrix());
         mate.imprimirMatrix(this.matrix);
     }
+    
+    
 }
