@@ -8,11 +8,20 @@ public class executeAlgo {
     public int [][] matrix;
     
     public void ejercicio1(){
-        matrix = mate.llenarMatrizOrdenada(10, 10);
+        mate.matrix(10, 10);
+        this.matrix = mate.llenarMatrix(mate.getMatrix());
         mate.imprimirMatrix(matrix);
     }
     
-    public void ejercicio1b(){
+    public void ejercicio2(){
+        System.out.println("Ejercicio 2");
+    }
+    
+    public void ejercicio3(){
+        System.out.println("Ejercicio 3");
+    }
+    
+    public void ejercicio7(){
         
         System.out.println("Ejercicio 1 - Ingresa un numero igual o mayor a 7");
         
@@ -29,13 +38,5 @@ public class executeAlgo {
         
         misc.dialogSandwhich(Sandwhich);
         
-    }
-    
-    public void ejercicio2(){
-        System.out.println("Ejercicio 2");
-    }
-    
-    public void ejercicio3(){
-        System.out.println("Ejercicio 3");
     }
 }

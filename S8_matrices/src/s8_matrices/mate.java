@@ -7,6 +7,18 @@ public class mate {
     static final Random random =  new Random();
     public int [][] matrix;
     
+    public void matrix(int x, int y){
+        this.matrix = new int [y][x];
+    }
+
+    public int[][] getMatrix() {
+        return matrix;
+    }
+
+    public void setMatrix(int[][] matrix) {
+        this.matrix = matrix;
+    }
+    
     public void sandwich(int limit){
         String [][] sandwich = new String[limit][limit];
         
@@ -69,8 +81,8 @@ public class mate {
         return sandwichtext;        
     }
     
-    public int [][] llenarMatrizOrdenada(int x, int y){
-        matrix =  new int [y][x];
+    public int [][] llenarMatrizOrdenada(int [][] temp){
+        matrix =  temp;
         int row = matrix.length;
         int column = matrix[0].length;
         int cont = 0;
@@ -80,6 +92,18 @@ public class mate {
                 cont++;
             }
         }
+        return matrix;
+    }
+    
+    public int [][] llenarMatrix(int [][] temp){
+        matrix =  temp;        
+        int row = matrix.length;
+        int column = matrix[0].length;        
+        
+        for(int i = 0; i < row; i++){
+            for(int j = 0; j < column ; j++){matrix[i][j]=random.nextInt(9);}
+        }
+        
         return matrix;
     }
     
@@ -101,5 +125,9 @@ public class mate {
         }
     }
     
+    public int [] sumaFilas(int [][] temp){        
+        int [] sumFilas = new int[temp.length];        
+        return sumFilas;
+    }
    
 }

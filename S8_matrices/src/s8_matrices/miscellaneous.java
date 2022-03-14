@@ -53,6 +53,7 @@ public class miscellaneous {
         return buscarnumero;
     }
     
+    //imprime un dialog
     public void dialogSandwhich( String Sandwich){
         JOptionPane.showConfirmDialog(null, Sandwich);
     }
