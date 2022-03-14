@@ -11,7 +11,7 @@ public class S8_matrices {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        while(menu!=10){
+        while(menu!=11){
             
             misc.printTheMenu();
             menu = misc.dialogLeerEntero();
@@ -51,6 +51,10 @@ public class S8_matrices {
                     break;
                 case 9:
                     //sopa de letras
+                    break;
+                case 10:
+                    //arraylist
+                    execute.ejercicio10();
                     break;
             }
         }

@@ -71,5 +71,11 @@ public class executeAlgo {
     //Sopa de Letras
     public void ejercicio9(){
         
-    }       
+    } 
+    
+    //Arralists
+    public void ejercicio10(){
+        int size = 20;
+        mate.ejemplodeArrayList(size);
+    }
 }

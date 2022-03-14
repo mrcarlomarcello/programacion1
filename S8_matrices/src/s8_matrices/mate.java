@@ -1,6 +1,7 @@
 
 package s8_matrices;
 import java.util.Random;
+import java.util.ArrayList;
 
 public class mate {
     
@@ -227,4 +228,29 @@ public class mate {
         }
     }
    
+    //ArraList
+    public void ejemplodeArrayList(int size){
+        
+        ArrayList listaDeArreglos = new ArrayList();
+        
+        for(int i = 0; i<size; i++){
+            listaDeArreglos.add(random.nextInt(9));
+        }
+        System.out.println(listaDeArreglos);
+        
+        System.out.println("Este es el tamaño del arreglo: " + listaDeArreglos.size());
+        
+        System.out.println("Vamos a ver si existe el 10 en el arreglo: "+ listaDeArreglos.contains(10));
+        
+        System.out.println("Vamos a ver si existe el 9 en el arreglo: "+ listaDeArreglos.contains(9));
+        
+        System.out.println("Vamos a ver si existe el 1 en el arreglo: "+ listaDeArreglos.contains(1));
+        
+        System.out.println("Vamos a remover la posicion 3: " + listaDeArreglos.get(3));
+        
+        listaDeArreglos.remove(3);
+        
+        System.out.println(listaDeArreglos);
+        
+    }
 }
