@@ -13,7 +13,7 @@ public class mate {
     }
     
     public void sopa(int x, int y){
-        this.sopa =new char [y][x];
+        this.sopa =new int [y][x];
     }
 
     public int[][] getMatrix() {
