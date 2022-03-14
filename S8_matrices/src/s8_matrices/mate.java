@@ -6,9 +6,14 @@ public class mate {
     
     static final Random random =  new Random();
     public int [][] matrix;
+    public int [][] sopa;
     
     public void matrix(int x, int y){
         this.matrix = new int [y][x];
+    }
+    
+    public void sopa(int x, int y){
+        this.sopa =new char [y][x];
     }
 
     public int[][] getMatrix() {
@@ -96,12 +101,12 @@ public class mate {
     }
     
     public int [][] llenarMatrix(int [][] temp){
-        matrix =  temp;        
-        int row = matrix.length;
-        int column = matrix[0].length;        
+        this.matrix =  temp;        
+        int row = this.matrix.length;
+        int column = this.matrix[0].length;        
         
         for(int i = 0; i < row; i++){
-            for(int j = 0; j < column ; j++){matrix[i][j]=random.nextInt(9);}
+            for(int j = 0; j < column ; j++){this.matrix[i][j]=random.nextInt(9);}
         }
         
         return matrix;
@@ -123,7 +128,7 @@ public class mate {
             }
             System.out.println();
         }
-    }
+    }    
     
     public int [][] sumaFilas(int [][] temp){        
         int [][] sumFilas = new int[temp.length][1];
@@ -186,6 +191,37 @@ public class mate {
                 else{
                     System.out.print(" " + ' ' + " ");
                 }                
+            }
+            System.out.println();
+        }
+    }
+    
+    //ascii de caracteres 97 a - 122 z
+    //a 97- e - 101 - i - 105 - o - 111 - u - 117
+    public int [][] llenarsopadeLetras(int [][] temp){
+        this.sopa =  temp;        
+        int row = this.sopa.length;
+        int column = this.sopa[0].length;        
+        
+        for(int i = 0; i < row; i++){
+            for(int j = 0; j < column ; j++){this.sopa[i][j]=random.nextInt(97,122);}
+        }        
+        return this.sopa;
+    }
+    
+    //Sopa creada
+    public void imprimirSopa(int [][] temp){
+        int row = temp[0].length;
+        int column = temp.length;
+        
+        for (int i = 0; i < column ; i++){
+            for (int j = 0; j < row; j++){
+                if(temp[i][j]<10){
+                    System.out.print("  " + (char)temp[i][j] + " ");
+                }else{
+                    System.out.print(" " + (char)temp[i][j] + " ");
+                }
+                
             }
             System.out.println();
         }

@@ -21,23 +21,27 @@ public class executeAlgo {
         mate.imprimirMatrix(mate.sumaFilas(this.matrix));
     }
     
+    //suma columnas
     public void ejercicio3(){
         System.out.println("Ejercicio 3");
         this.matrix = mate.getMatrix();
         mate.imprimirMatrix(mate.sumaColumns(this.matrix));
     }
     
+    //cambia caracteres según un número que encuentre
     public void ejercicio4(){
         System.out.println("Ejercicio 4 - Buscaremos el '5'");
         this.matrix = mate.getMatrix();
         mate.encontrarNumero(this.matrix, 5);
     }
     
+    //Imprime funcion de X
     public void ejercicio5(){
         System.out.println("Ejercicio 5 - Funciones");
         mate.yfunciondex(this.matrix);
     }
     
+    //Imprime un sandwhich
     public void ejercicio7(){
         
         System.out.println("Ejercicio 1 - Ingresa un numero igual o mayor a 7");
@@ -64,5 +68,8 @@ public class executeAlgo {
         mate.imprimirMatrix(this.matrix);
     }
     
-    
+    //Sopa de Letras
+    public void ejercicio9(){
+        
+    }       
 }

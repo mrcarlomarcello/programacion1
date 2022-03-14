@@ -48,6 +48,10 @@ public class S8_matrices {
                 case 8:
                     //Crea una matriz Ordenada
                     execute.ejercicio8();
+                    break;
+                case 9:
+                    //sopa de letras
+                    break;
             }
         }
     }
