@@ -19,7 +19,7 @@ public class S8_matrices {
             
             switch(menu){
                 case 1:
-                    // Crear una matriz global Ordenada
+                    // Crear una matriz global desordenada
                     execute.ejercicio1();
                     break;
                 case 2:
@@ -31,6 +31,7 @@ public class S8_matrices {
                     execute.ejercicio3();
                     break;
                 case 4:
+                    execute.ejercicio4();
                     //encontrar un numero
                     break;
                 case 5:
@@ -43,6 +44,9 @@ public class S8_matrices {
                     //Sandwich
                     execute.ejercicio7();
                     break;
+                case 8:
+                    //Crea una matriz Ordenada
+                    execute.ejercicio8();
             }
         }
     }

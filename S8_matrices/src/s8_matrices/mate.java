@@ -88,7 +88,7 @@ public class mate {
         int cont = 0;
         for(int i =0; i < column; i++){
             for(int j =0; j < row ; j ++){
-                matrix[j][i] =  cont;
+                matrix[i][j] =  cont;
                 cont++;
             }
         }
@@ -109,15 +109,15 @@ public class mate {
     
     public void imprimirMatrix(int [][] temp){
         
-        int row = temp.length;
-        int column = temp[0].length;
+        int row = temp[0].length;
+        int column = temp.length;
         
         for (int i = 0; i < column ; i++){
             for (int j = 0; j < row; j++){
-                if(temp[j][i]<10){
-                    System.out.print("  " + temp[j][i] + " ");
+                if(temp[i][j]<10){
+                    System.out.print("  " + temp[i][j] + " ");
                 }else{
-                    System.out.print(" " + temp[j][i] + " ");
+                    System.out.print(" " + temp[i][j] + " ");
                 }
                 
             }
@@ -125,9 +125,52 @@ public class mate {
         }
     }
     
-    public int [] sumaFilas(int [][] temp){        
-        int [] sumFilas = new int[temp.length];        
+    public int [][] sumaFilas(int [][] temp){        
+        int [][] sumFilas = new int[temp.length][1];
+        int suma = 0;
+        for(int i = 0; i < (temp.length); i++){
+            for(int j = 0; j < temp[0].length; j++){
+                suma += temp[i][j];
+            }
+            sumFilas[i][0] = suma;
+            suma=0;
+        }
         return sumFilas;
+    }
+    
+    public int [][] sumaColumns(int [][] temp){        
+        int [][] sumColumnas = new int[1][temp[0].length];
+        int suma = 0;
+        for(int j = 0; j < temp[0].length; j++){
+            for(int i = 0; i < (temp.length); i++){
+                suma += temp[i][j];
+            }
+            sumColumnas[0][j] = suma;
+            suma=0;
+        }
+        return sumColumnas;
+    }
+    
+    public void encontrarNumero(int [][] temp, int num){
+        
+        int row = temp[0].length;
+        int column = temp.length;
+        
+        for (int i = 0; i < column ; i++){
+            for (int j = 0; j < row; j++){
+                if(temp[i][j]<10){
+                    if(temp[i][j]==num){
+                        System.out.print("  " + "X" + " ");
+                    }else{
+                        System.out.print("  " + temp[i][j] + " ");   
+                    }                    
+                }else{
+                    System.out.print(" " + temp[i][j] + " ");
+                }
+                
+            }
+            System.out.println();
+        }
     }
    
 }
