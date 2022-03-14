@@ -8,7 +8,7 @@ public class executeAlgo {
     public int [][] matrix;
     
     public void ejercicio1(){
-        matrix = mate.llenarMatriz(10, 10);
+        matrix = mate.llenarMatrizOrdenada(10, 10);
         mate.imprimirMatrix(matrix);
     }
     

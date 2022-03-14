@@ -69,7 +69,7 @@ public class mate {
         return sandwichtext;        
     }
     
-    public int [][] llenarMatriz(int x, int y){
+    public int [][] llenarMatrizOrdenada(int x, int y){
         matrix =  new int [y][x];
         int row = matrix.length;
         int column = matrix[0].length;
@@ -100,4 +100,6 @@ public class mate {
             System.out.println();
         }
     }
+    
+   
 }
