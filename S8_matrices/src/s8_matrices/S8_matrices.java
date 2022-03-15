@@ -40,6 +40,7 @@ public class S8_matrices {
                     break;
                 case 6:
                     //matriz de caracteres
+                    execute.ejercicio6();
                     break;
                 case 7:
                     //Sandwich
@@ -51,6 +52,7 @@ public class S8_matrices {
                     break;
                 case 9:
                     //sopa de letras
+                    execute.ejercicio9();
                     break;
                 case 10:
                     //arraylist

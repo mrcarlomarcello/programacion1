@@ -9,7 +9,7 @@ public class executeAlgo {
     
     //crea una matriz desordenada
     public void ejercicio1(){
-        mate.matrix(10, 9);
+        mate.matrix(20, 20);
         this.matrix = mate.llenarMatrix(mate.getMatrix());
         mate.imprimirMatrix(this.matrix);
     }
@@ -41,6 +41,13 @@ public class executeAlgo {
         mate.yfunciondex(this.matrix);
     }
     
+    //Matrix de Letras
+    public void ejercicio6(){
+        this.mate.matrix(20,20);
+        this.matrix = mate.llenarMatrizOrdenada(mate.getMatrix());
+        this.mate.imprimirSopa(this.matrix);
+    }
+    
     //Imprime un sandwhich
     public void ejercicio7(){
         
@@ -63,14 +70,16 @@ public class executeAlgo {
     
     //crea una matriz ordenada
     public void ejercicio8(){
-        mate.matrix(10,10);
+        this.mate.matrix(20,20);
         this.matrix = mate.llenarMatrizOrdenada(mate.getMatrix());
         mate.imprimirMatrix(this.matrix);
     }
     
     //Sopa de Letras
     public void ejercicio9(){
-        
+        this.mate.matrix(20,20);
+        this.matrix = mate.llenarsopadeLetras(matrix);
+        mate.imprimirSopa(this.matrix);
     } 
     
     //Arralists
