@@ -82,10 +82,9 @@ public class executeAlgo {
     public void ejercicio9(){
         this.mate.matrix(20,20);
         this.matrix = mate.llenarsopadeLetras(matrix);
-        mate.imprimirSopa(this.matrix);
-        
+        mate.imprimirSopa(this.matrix);        
         String busqueda = misc.dialogLeerFrase();
-        Spells.busquedaHorizontal(busqueda, this.matrix);
+        Spells.wordmazeRunner(this.matrix, busqueda);
     } 
     
     //Arralists
