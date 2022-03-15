@@ -240,13 +240,19 @@ public class mate {
         
         System.out.println("Este es el tamaño del arreglo: " + listaDeArreglos.size());
         
-        System.out.println("Vamos a ver si existe el 10 en el arreglo: "+ listaDeArreglos.contains(10));
+        System.out.println("Vamos a ver si existe el 10 en el arreglo .contains(): "+ listaDeArreglos.contains(10));
         
-        System.out.println("Vamos a ver si existe el 9 en el arreglo: "+ listaDeArreglos.contains(9));
+        System.out.println("Vamos a ver si existe el 9 en el arreglo .contains(): "+ listaDeArreglos.contains(9));
         
-        System.out.println("Vamos a ver si existe el 1 en el arreglo: "+ listaDeArreglos.contains(1));
+        System.out.println("Vamos a ver si existe el 7 en el arreglo .contains(): "+ listaDeArreglos.contains(7));
         
-        System.out.println("Vamos a remover la posicion 3: " + listaDeArreglos.get(3));
+        System.out.println("Vamos a ver si existe el 6 en el arreglo .contains(): "+ listaDeArreglos.contains(6));
+        
+        System.out.println("Vamos a ver si existe el 3 en el arreglo .contains(): "+ listaDeArreglos.contains(3));
+        
+        System.out.println("Vamos a ver si existe el 1 en el arreglo .contains(): "+ listaDeArreglos.contains(1));
+        
+        System.out.println("Vamos a remover la posicion 3 con el metodo .remove : " + listaDeArreglos.get(3));
         
         listaDeArreglos.remove(3);
         
