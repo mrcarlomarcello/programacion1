@@ -31,12 +31,12 @@ public class S8_matrices {
                     execute.ejercicio3();
                     break;
                 case 4:
-                    execute.ejercicio4();
                     //encontrar un numero
+                    execute.ejercicio4();                    
                     break;
                 case 5:
-                    execute.ejercicio5();
                     //recibe una matriz desordenada y lo pasa a arreglo, lo ordena y lo pasa a matriz
+                    execute.ejercicio5();                    
                     break;
                 case 6:
                     //matriz de caracteres

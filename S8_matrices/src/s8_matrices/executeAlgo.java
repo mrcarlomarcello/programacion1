@@ -5,7 +5,10 @@ package s8_matrices;
 public class executeAlgo {
     static final mate mate = new mate();
     static final miscellaneous misc = new miscellaneous();
+    static final spells Spells = new spells();
     public int [][] matrix;
+
+    
     
     //crea una matriz desordenada
     public void ejercicio1(){
@@ -80,6 +83,9 @@ public class executeAlgo {
         this.mate.matrix(20,20);
         this.matrix = mate.llenarsopadeLetras(matrix);
         mate.imprimirSopa(this.matrix);
+        
+        String busqueda = misc.dialogLeerFrase();
+        Spells.busquedaHorizontal(busqueda, this.matrix);
     } 
     
     //Arralists

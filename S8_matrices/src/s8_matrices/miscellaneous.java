@@ -5,6 +5,7 @@ import javax.swing.JOptionPane;
         
 public class miscellaneous {
     
+   private String frase = new String();
    //private final Scanner in = new Scanner(System.in);        
     //Imprime mi menu
     public void printTheMenu(){
@@ -38,6 +39,7 @@ public class miscellaneous {
             System.out.print(  "|-----------------------------|: ");
     }
     
+    
     //Quiero un metodo para leer Enteros...(retorna un entero)
     public int dialogLeerEntero(){
         
@@ -51,6 +53,14 @@ public class miscellaneous {
         
    
         return buscarnumero;
+    }
+    
+    //Quiero Leer una String
+    public String dialogLeerFrase(){
+        
+        this.frase =JOptionPane.showInputDialog("Ingresa una frase");        
+        return frase;
+        
     }
     
     //imprime un dialog
