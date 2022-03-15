@@ -232,27 +232,28 @@ public class mate {
     public void ejemplodeArrayList(int size){
         
         ArrayList listaDeArreglos = new ArrayList();
-        
+                
         for(int i = 0; i<size; i++){
             listaDeArreglos.add(random.nextInt(9));
         }
+        
         System.out.println(listaDeArreglos);
         
         System.out.println("Este es el tamaño del arreglo: " + listaDeArreglos.size());
         
-        System.out.println("Vamos a ver si existe el 10 en el arreglo .contains(): "+ listaDeArreglos.contains(10));
+        System.out.println("Vamos a ver si existe el 10 en el arreglo .contains(10): "+ listaDeArreglos.contains(10));
         
-        System.out.println("Vamos a ver si existe el 9 en el arreglo .contains(): "+ listaDeArreglos.contains(9));
+        System.out.println("Vamos a ver si existe el 9 en el arreglo .contains(9): "+ listaDeArreglos.contains(9));
         
-        System.out.println("Vamos a ver si existe el 7 en el arreglo .contains(): "+ listaDeArreglos.contains(7));
+        System.out.println("Vamos a ver si existe el 7 en el arreglo .contains(7): "+ listaDeArreglos.contains(7));
         
-        System.out.println("Vamos a ver si existe el 6 en el arreglo .contains(): "+ listaDeArreglos.contains(6));
+        System.out.println("Vamos a ver si existe el 6 en el arreglo .contains(6): "+ listaDeArreglos.contains(6));
         
-        System.out.println("Vamos a ver si existe el 3 en el arreglo .contains(): "+ listaDeArreglos.contains(3));
+        System.out.println("Vamos a ver si existe el 3 en el arreglo .contains(3): "+ listaDeArreglos.contains(3));
         
-        System.out.println("Vamos a ver si existe el 1 en el arreglo .contains(): "+ listaDeArreglos.contains(1));
+        System.out.println("Vamos a ver si existe el 1 en el arreglo .contains(1): "+ listaDeArreglos.contains(1));
         
-        System.out.println("Vamos a remover la posicion 3 con el metodo .remove : " + listaDeArreglos.get(3));
+        System.out.println("Vamos a remover la posicion 3 con el metodo .remove(3) : " + listaDeArreglos.get(3));
         
         listaDeArreglos.remove(3);
         

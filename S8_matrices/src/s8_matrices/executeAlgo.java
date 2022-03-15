@@ -3,12 +3,12 @@ package s8_matrices;
 
 
 public class executeAlgo {
+    
     static final mate mate = new mate();
     static final miscellaneous misc = new miscellaneous();
     static final spells Spells = new spells();
     public int [][] matrix;
 
-    
     
     //crea una matriz desordenada
     public void ejercicio1(){
