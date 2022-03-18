@@ -11,9 +11,9 @@ public class Lab9P1_CarloMenjivar {
         int menu = 0;
         
         while(menu != 3){
-            
-            menu = misc.leerEntero("Ingrese un Numero: ");
+                        
             misc.printTheMenu();            
+            menu = misc.leerEntero("Ingrese un Numero: ");
             
             switch(menu){                
                 case 1:

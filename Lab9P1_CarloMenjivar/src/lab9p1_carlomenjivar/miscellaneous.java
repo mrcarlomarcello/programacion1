@@ -11,12 +11,12 @@ public class miscellaneous {
     public void printTheMenu(){
             //Imprimimos un menu llamativo y bonito
             System.out.println("|-------------------------------------------------------|");
-            System.out.println("|----- Laboratorio 8 ------ programacion 1 -------------|");
+            System.out.println("|----- Laboratorio 9 ------ programacion 1 -------------|");
             System.out.println("|-------------------------------------------------------|");
             System.out.println("|-------------------------------------------------------|");            
-            System.out.println("|------------- Ingresa una opcion de 1-3 ---------------|");
+            System.out.println("|------------- Ingresa una opcion de 1-2 ---------------|");
             System.out.println("|-------------------------------------------------------|");
-            System.out.println("|-----------------------------4 para salir--------------|");
+            System.out.println("|-----------------------------3 para salir--------------|");
             System.out.println("|-------------------------------------------------------|");
             //agregando efectos de drama a mi programa
                     try{
@@ -34,10 +34,9 @@ public class miscellaneous {
                         System.out.println("Igual no deberia de estar poniendo esto... so...");
                     } 
             System.out.println("|--------------------------- Exit with 4 !--------------|");
-            System.out.println("|-------------------------------------------------------|");
-            System.out.println("|--- Puntos Extra por hacer el flip edition ------------|");
-            System.out.println("|--- (quiero mis puntos hey)  --------------------------|");
-            System.out.print(  "|-----------------------------|: ");
+            System.out.println("|-------------------------------------------------------|");            
+            System.out.println("|--- ( insert a joke here ) ----------------------------|");
+            System.out.println("|-----------------------------|: ");
     }
     
     //Quiero un metodo para leer Enteros...(retorna un entero)
@@ -50,6 +49,12 @@ public class miscellaneous {
         int buscarnumero = in.nextInt();
         in.nextLine();
         return buscarnumero;
+    }
+    
+    public String leerCadena(String temp){
+        System.out.println(temp);
+        String cadena = in.nextLine();
+        return cadena;
     }
     
 }
