@@ -1,13 +1,25 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package lab9p1_carlomenjivar;
 
-/**
- *
- * @author shello101
- */
+
 public class executeAlgo {
+    
+    public miscellaneous misc = new miscellaneous();
+    public soneteo sone = new soneteo();
+    public CRAI Crai = new CRAI();
+    
+    public void ejercicio1(){        
+        System.out.println("Ejercicio 1 - Zoneteo");
+        int cant = misc.leerEntero("Ingrese la cantidad de IPs a Evaluar: ");        
+        
+        for(int i =0; i< cant && i<255; i++){
+            
+        }
+        
+    }
+    
+    public void ejercicio2(){
+        System.out.println("Ejercicio 2 - Librería CRAI");
+    }
     
 }
