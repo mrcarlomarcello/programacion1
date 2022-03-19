@@ -48,29 +48,32 @@ public class CRAI {
     public void agregarUsuario(String temp){
         this.listaUsuarios.add(temp);
         this.librosUsuarios.add("");
-        System.out.println("Listo, se ha agregado "+temp);       
+        System.out.println("Listo, se ha agregado "+temp);
+        System.out.println();
     }
     
     public void agregarLibro(String temp){
         this.librosDisponibles.add(temp);
-        System.out.println("Listo, se ha agregado el libro: "+temp);        
+        System.out.println("Listo, se ha agregado el libro: "+temp);
+        System.out.println();
     }
     
     public void eliminar(int pos){
         
-        if(listaUsuarios.size() >= 0 && pos < listaUsuarios.size()){
+        if( !listaUsuarios.isEmpty() && pos < listaUsuarios.size()){
             this.librosDisponibles.add(this.librosUsuarios.get(pos));
             this.librosUsuarios.remove(pos);
             this.listaUsuarios.remove(pos);
             System.out.println("Listo el usuario se ha eliminado.");
+            System.out.println();
         }                
     }
     
     public void asignar(int pos, int posEliminar){
         this.librosUsuarios.set(pos, this.librosDisponibles.get(posEliminar));
         this.librosDisponibles.remove(posEliminar);
-        System.out.println("Libros Asignados");
-        imprimir(3);
+        System.out.println("Libro Asignado!");  
+        System.out.println();
     }
     
     public void imprimir(int option){
@@ -82,7 +85,7 @@ public class CRAI {
             System.out.println();
         }
         if(option ==2 || option == 4){
-            System.out.println("Lista de Libros: ");
+            System.out.println("Lista de Libros Disponibles: ");
             for(int i = 0; i < this.librosDisponibles.size(); i++) { System.out.println(i +" - "+ this.librosDisponibles.get(i)); }
             System.out.println("-----------------");
             System.out.println();
@@ -94,4 +97,5 @@ public class CRAI {
             System.out.println();
         }                              
     }
+    
 }
