@@ -49,7 +49,7 @@ public class miscellaneous {
         //    this.in.nextLine();
         //}
         //int buscarnumero = in.nextInt();
-        int buscarnumero = Integer.parseInt(JOptionPane.showInputDialog("Ingresa un Número: "));
+        int buscarnumero = Integer.parseInt(JOptionPane.showInputDialog("Ingresa un Número  1 - 10: "));
         
    
         return buscarnumero;
@@ -58,7 +58,7 @@ public class miscellaneous {
     //Quiero Leer una String
     public String dialogLeerFrase(){
         
-        this.frase =JOptionPane.showInputDialog("Ingresa una frase");        
+        this.frase =JOptionPane.showInputDialog("Ingresa una frase: ");        
         return frase;
         
     }

@@ -184,7 +184,7 @@ public class mate {
         int row = temp[0].length;
         int column = temp.length;
         
-        for (int i = 0; i < column ; i++){
+        for (int i = column -1 ; i > 0 ; i--){
             for (int j = 0; j < row; j++){
                 if(i==j){                
                     System.out.print(" " + 'X' + " ");
