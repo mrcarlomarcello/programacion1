@@ -184,6 +184,7 @@ public class mate {
         int row = temp[0].length;
         int column = temp.length;
         
+        //agregue este cambio para que imprimiera la funcion de Y graficamente correcta
         for (int i = column -1 ; i > 0 ; i--){
             for (int j = 0; j < row; j++){
                 if(i==j){                
